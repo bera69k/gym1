@@ -46,7 +46,7 @@ const RegisterForm = () => {
       type: "text",
       placeholder: "Username",
       errorMessage:
-        "User name should be 3-16 characters and should not include any special character!",
+        "User name should be 3-16 characters",
       label: "Username",
       required: true,
       pattern: "^[A-Za-z0-9]{3,16}$",
@@ -57,7 +57,7 @@ const RegisterForm = () => {
       type: "email",
       placeholder: "Email",
       label: "Email",
-      errorMessage: "It should be a valid email address",
+      errorMessage: "Please enter a valid email address",
       required: true,
     },
 

@@ -26,6 +26,7 @@ const LoginForm = () => {
       type: "email",
       placeholder: "Email",
       label: "Email",
+      errorMessage: "Please enter a valid email address",
     },
     {
       id: 2,
@@ -33,6 +34,7 @@ const LoginForm = () => {
       type: "password",
       placeholder: "Password",
       label: "Password",
+      errorMessage: "Wrong password try again!",
     },
   ];
   const onChange = (e) => {

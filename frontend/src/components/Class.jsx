@@ -3,9 +3,10 @@ import { useState } from "react";
 import {Link} from 'react-router-dom'
 const Class = (props) => {
   const [isHovering, setIsHovering] = useState(false);
+  // eslint-disable-next-line react/prop-types
   const { trainerName, image,id } = props;
 
-  function hoverHandler() {
+  const hoverHandler=()=> {
     setIsHovering(true);
   }
   const unHoverHandler = () => {
@@ -20,7 +21,7 @@ const Class = (props) => {
         onMouseOver={hoverHandler}
         onMouseOut={unHoverHandler}
       >
-        {isHovering ? (
+        {isHovering && (
           <div>
             <h1 className="text-white text-2xl">{trainerName}</h1>
             <Link to={`/classes/${id}`}>
@@ -31,8 +32,6 @@ const Class = (props) => {
             </button>
             </Link>
           </div>
-        ) : (
-          ""
         )}
       </div>
     </div>
