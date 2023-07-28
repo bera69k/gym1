@@ -1,0 +1,19 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* background-image: url('./assets/wtf.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+body::-webkit-scrollbar {
+    display: none;
+  }
+

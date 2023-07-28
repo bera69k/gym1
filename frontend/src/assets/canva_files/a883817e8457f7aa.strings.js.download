@@ -1,0 +1,8 @@
+(function() {
+ const messages = JSON.parse("{\"s2r3zQ\":\"This {0, select, element {element} template {template} other {element}} is available from your profile only. It will not show up in the Canva library\",\"lhcdag\":\"New\",\"XOSjTA\":\"This {0, select, element {element} template {template} other {element}} has been promoted to the Canva library\",\"v2Y0RA\":\"PROFILE ONLY\",\"DR/kZA\":\"We're currently in beta and review times may vary. We'll email you when it's ready.\",\"YbuX+A\":\"Purchased\",\"Wvn+9g\":\"IN REVIEW\",\"+25X9A\":\"Purchase a One Design Use license or upgrade to Canva Pro to access this {0, select, element {element} template {template} other {element}}.\",\"kHI6LQ\":\"You've already purchased this {0, select, element {element} template {template} other {element}}. You can re-download it anytime!\",\"Nc70FQ\":\"Paid\",\"r+ba+Q\":\"Upgrade to Canva Pro to access this {0, select, element {element} template {template} other {element}}.\",\"YhEcCA\":\"New\",\"TveXrg\":\"DOC\",\"I3ZaVA\":\"PRO\",\"bET1ig\":\"PROMOTED\",\"fqxI/g\":\"EDU\",\"vkDsuw\":\"This template contains paid elements.\",\"MUOsXA\":\"Canva Pro subscribers get this {0, select, element {element} template {template} other {element}} for free.\",\"kLiVxQ\":\"{0} of {1}\",\"6X433A\":\"Canva for Education users get this {0, select, element {element} template {template} other {element}} for free.\",\"7hydPA\":\"Vimeo video\"}");
+ const cmsg = window["cmsg"] = window["cmsg"] || {};
+ const loaded = cmsg["loaded"] = cmsg["loaded"] || {};
+ loaded["a883817e8457f7aa.strings.js"] = 1;
+ const strings = cmsg["strings"] = cmsg["strings"] || {};
+ strings["en"] = strings["en"] ? Object.assign(strings["en"], messages) : messages;
+})();
