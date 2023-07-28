@@ -1,12 +1,13 @@
 import classes from "./Class.module.css";
 import { useState } from "react";
+import {Link} from 'react-router-dom'
 const Class = (props) => {
   const [isHovering, setIsHovering] = useState(false);
-  const { trainerName, image } = props;
+  const { trainerName, image,id } = props;
 
-  const hoverHandler = () => {
+  function hoverHandler() {
     setIsHovering(true);
-  };
+  }
   const unHoverHandler = () => {
     setIsHovering(false);
   };
@@ -22,9 +23,13 @@ const Class = (props) => {
         {isHovering ? (
           <div>
             <h1 className="text-white text-2xl">{trainerName}</h1>
-            <button className="p-4 border-2 text-white m-auto hover:bg-black hover:text-white hover:ease-in hover:duration-300 hover:border-black mt-48">
+            <Link to={`/classes/:${id}`}>
+            <button className={classes.button}>
+              
               Check Out
+              
             </button>
+            </Link>
           </div>
         ) : (
           ""
