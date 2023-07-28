@@ -12,7 +12,7 @@ import RegisterPage from "./pages/RegisterPage";
 import { UserContextProvider } from "../context/userContext";
 import axios from 'axios'
 import Profile from "./pages/Profile";
-import ClassDescription, {loader as classesLoader} from "./pages/ClassDescription";
+import ClassDescription from "./pages/ClassDescription";
 
 
 const router = createBrowserRouter([
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     {path:'about', element:<About/>},
     {path:'about/location', element:<Location/>},
     {path:'classes', element:<Classes/>,},
-    {path:'/classes/:id', element:<ClassDescription/>, loader:{classesLoader}},
+    {path:'/classes/:id', element:<ClassDescription/>},
     {path:'gallery', element:<Gallery/>},
     {path:'pricing', element:<Pricing/>},
     {path:'login' ,element:<LoginPage/>},
