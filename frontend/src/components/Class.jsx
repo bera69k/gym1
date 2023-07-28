@@ -23,7 +23,7 @@ const Class = (props) => {
         {isHovering ? (
           <div>
             <h1 className="text-white text-2xl">{trainerName}</h1>
-            <Link to={`/classes/:${id}`}>
+            <Link to={`/classes/${id}`}>
             <button className={classes.button}>
               
               Check Out

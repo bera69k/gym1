@@ -14,7 +14,8 @@ import larry from "../assets/larry.jpg";
 import arnold from "../assets/arnold.webp";
 import mikeohearn from "../assets/mikeohearn.jpg";
 import calum from "../assets/calum.jpg";
-const Classes = () => {
+import Trainers from "../components/Trainers";
+const Classes = (props) => {
   const trainers = [
     { id: 1, num: "Dorian Yates", img: dorian },
     { id: 2, num: "David Goggins", img: david1 },
