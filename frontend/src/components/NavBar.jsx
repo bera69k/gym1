@@ -1,17 +1,18 @@
 import logo from "../assets/logo.png";
 import { Link, NavLink } from "react-router-dom";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../../context/userContext";
 
 const NavBar = () => {
 
-  const location = useLocation()
+
   const {user} = useContext(UserContext)
+  console.log("User data:", user);
   const navigate = useNavigate()
 
   const redirectHandler  =()=>{
-    navigate(`/profile/:${user.name}`)
+    navigate(`/profile/${user.name}`)
   }
 
   return (
@@ -37,6 +38,7 @@ const NavBar = () => {
             <NavLink
               to="about"
               className="text-white aria-[current=page]:text-[gold] hover:text-[gold]"
+              end
             >
               About
             </NavLink>
@@ -45,6 +47,7 @@ const NavBar = () => {
             <NavLink
               to="classes"
               className="text-white aria-[current=page]:text-[gold] hover:text-[gold]"
+              end
             >
               Classes
             </NavLink>
@@ -53,6 +56,7 @@ const NavBar = () => {
             <NavLink
               to="gallery"
               className="text-white aria-[current=page]:text-[gold] hover:text-[gold]"
+              end
             >
               Gallery
             </NavLink>
@@ -61,6 +65,7 @@ const NavBar = () => {
             <NavLink
               to="pricing"
               className="text-white aria-[current=page]:text-[gold] hover:text-[gold]"
+              end
             >
               Pricing
             </NavLink>
@@ -68,7 +73,7 @@ const NavBar = () => {
         </ul>
 
 
-        {location.pathname !=='/login' ?        <svg onClick={redirectHandler}
+        {user &&  <svg onClick={redirectHandler}
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -81,7 +86,7 @@ const NavBar = () => {
             strokeLinejoin="round"
             d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
           />
-        </svg> : ''}
+        </svg>}
       </div>
     </>
   );

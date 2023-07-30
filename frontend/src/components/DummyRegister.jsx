@@ -25,7 +25,9 @@ const RegisterForm = () => {
           toast.error(data.error)
         }else{
           setData({})
-          toast.success('Login Successful.Welcome!')
+          toast('Registered successfully, Welcome', {
+            icon: '💪',
+          });
           navigate('/login')
         }
       }catch(error){
@@ -67,8 +69,8 @@ const RegisterForm = () => {
       type: "password",
       placeholder: "Password",
       label: "Password",
-      // errorMessage:
-      //   "Password should be 8-20 characters and should inclue at least 1 letter, 1 number and 1 special character",
+       errorMessage:
+         "Password should be 8-20 characters",
       required: true,
       // pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
     },
@@ -88,7 +90,7 @@ const RegisterForm = () => {
     <>
       <div className={classes.main}>
         <div className={classes.submain}>
-          <div className={classes["form-place"]}>
+          <div className={classes.formPlace}>
             <form className={classes.join} onSubmit={handleSubmit}>
               <h1 className={classes.headText}>Register</h1>
               {inputs.map((input) => (

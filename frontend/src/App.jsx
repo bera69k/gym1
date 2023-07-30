@@ -15,13 +15,14 @@ import Profile from "./pages/Profile";
 import ClassDescription from "./pages/ClassDescription";
 
 
+
 const router = createBrowserRouter([
   {path:'/', element:<Root/>, children:[
     {index:true, element:<Home/>},
     {path:'about', element:<About/>},
     {path:'about/location', element:<Location/>},
     {path:'classes', element:<Classes/>,},
-    {path:'/classes/:id', element:<ClassDescription/>},
+    {path:'classes/:id', element:<ClassDescription />},
     {path:'gallery', element:<Gallery/>},
     {path:'pricing', element:<Pricing/>},
     {path:'login' ,element:<LoginPage/>},

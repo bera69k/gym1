@@ -11,8 +11,10 @@ import { UserContext } from '../../context/userContext'
 
 
 const LoginForm = () => {
+  const {setUser} = useContext(UserContext)
   const {user} = useContext(UserContext)
-  const navigate = useNavigate();
+  const navigate = useNavigate()
+
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -43,18 +45,24 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const { email, password } = data;
     try {
+      
       const { data } = await axios.post('/login', { email, password });
       if (data.error) {
         toast.error(data.error);
       } else {
-        setData({});
-        navigate(`/profile/:${user.name}`);
+        setUser(data)
+        toast.success('You are Logged in, Welcome', {
+          icon: '💪',
+        });
+       navigate(`/`);
       }
     } catch (err) {
       console.log(err);
     }
+
   };
   
   return (

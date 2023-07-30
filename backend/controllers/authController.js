@@ -1,9 +1,10 @@
 const User = require("../models/user");
 const { hashPassword, comparePasswords } = require("../helpers/auth");
-const jwt = require('jsonwebtoken')
+const jwt = require("jsonwebtoken");
 const test = (req, res) => {
   res.json("test is working");
 };
+
 const registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -44,7 +45,7 @@ const registerUser = async (req, res) => {
 
 const loginUser = async (req, res) => {
   try {
-    const {email, password} = req.body;
+    const { email, password } = req.body;
 
     //Check if user exists
     const user = await User.findOne({ email });
@@ -56,10 +57,19 @@ const loginUser = async (req, res) => {
     //Check if passwords match
     const match = await comparePasswords(password, user.password);
     if (match) {
-      jwt.sign({email: user.email, id: user._id,name: user.name}, process.env.JWT_SECRET, {}, (err, token)=>{
-        if(err) throw err;
-        res.cookie('token', token).json(user)
-      })
+      jwt.sign(
+        { email: user.email, id: user._id, name: user.name },
+        process.env.JWT_SECRET,
+        {},
+        (err, token) => {
+          if (err) throw err;
+          res.cookie("token", token,{
+            httpOnly: true,
+            secure: true,
+            sameSite: "strict",
+          }).json(user);
+        }
+      );
     }
     if (!match) {
       res.json({
@@ -72,18 +82,33 @@ const loginUser = async (req, res) => {
 };
 //
 
-const getProfile = (req,res)=>{
-  const {token} = req.cookies
-  if(token){
-    jwt.verify(token, process.env.JWT_SECRET,{}, (err, user)=>{
-      if(err) throw err;
-      res.json(user)
-    })
+const getProfile = (req, res) => {
+  const { token } = req.cookies;
+  if (token) {
+    jwt.verify(token, process.env.JWT_SECRET, {}, (err, user) => {
+      if (err) throw err;
+      res.json(user);
+    });
   } else {
-    res.json(null)
+    res.json(null);
   }
-}
+};
+const logOut = async (req, res)=>{
+  const cookies = req.cookies;
+  if(!cookies?.jwt) return res.sendStatus(204);
+  const refreshToken = cookies.jwt
+  const foundUser = await User.findOne({refreshToken}).exec();
+  if(!foundUser){
+    res.clearCookie('jwt',{httpOnly:true,sameSite:'None',secure:true});
+    return res.sendStatus(204)
+  }
+  foundUser.refreshToken = '';
+  const result = await foundUser.save();
+  console.log(result)
 
+  res.clearCookie('jwt',{httpOnly: true,sameSite:'None', secure:true});
+  res.sendStatus(204)
+}
 
 
 module.exports = {
@@ -91,4 +116,5 @@ module.exports = {
   registerUser,
   loginUser,
   getProfile,
+  logOut,
 };

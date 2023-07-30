@@ -7,7 +7,7 @@ const Root = () => {
   return (
     <>
     <NavBar />
-    <Toaster position="bottom-right" toastOptions={{duration:2000}}/>
+    <Toaster position="top-center" toastOptions={{duration:2000}}/>
         <main>
             <Outlet/>
         </main>

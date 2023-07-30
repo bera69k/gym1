@@ -1,12 +1,15 @@
 import ClassHelper from "../components/ClassHelper"
 
+
 const ClassDescription = () => {
+
+
+
   return (
     <>
-      <ClassHelper />
+      <ClassHelper/>
     </>
   )
 }
 
 export default ClassDescription
-

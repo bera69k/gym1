@@ -1,0 +1,192 @@
+.trainer-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trainer-info {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.trainer-info img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.trainer-info h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.trainer-info p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.trainer-info button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.exercises {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.exercises h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.exercises ul {
+    margin-top: 20px; 
+    list-style: none; 
+    padding: 0; 
+  }
+
+.exercise-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.exercise-item {
+  position: relative;
+}
+
+.video-thumbnail-container {  
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center bottom;
+}
+
+.exercise-item:hover .video-thumbnail-container {
+  visibility: visible;
+  opacity: 1;
+  animation: thumbnailPopUp 0.6s forwards;
+}
+
+.exercise-item span {
+  flex-grow: 1;
+  font-size: 18px;
+}
+
+.video-thumbnail {
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.video-modal {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.video-player {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.control-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0 5px;
+}
+
+.control-button:focus {
+  outline: none;
+}
+
+.control-button:hover {
+  color: #4caf50;
+}
+
+.muted {
+  color: red;
+}
+
+@keyframes thumbnailPopUp {
+  0% {
+    transform: scale(0);
+    top: 0px;
+  }
+  50% {
+    transform: scale(1.2);
+    top: -100px;
+  }
+  100% {
+    transform: scale(1);
+    top: -60px;
+  }
+}

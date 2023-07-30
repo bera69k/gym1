@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import { useLocation } from "react-router-dom";
 const Footer = () => {
-  const location = useLocation();
   return (
     <>
-      {location.pathname !== "/" ? (
-        <footer className="bg-black  grid grid-cols-4  h-48 text-center text-white  inset-x-0 bottom-0 mt-auto z-10">
+       
+        <footer className="bg-black  grid grid-cols-3  h-48 text-center text-white  inset-x-0 bottom-0 mt-auto z-10">
           <div className=" m-auto">
             <h1 className="uppercase text-3xl text-white">
               work harder with us
@@ -63,18 +61,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
-            <ul>
-              <li>liTest</li>
-              <li>liTest</li>
-              <li>liTest</li>
-              <li>liTest</li>
-            </ul>
-          </div>
         </footer>
-      ) : (
-        ""
-      )}
+
     </>
   );
 };
