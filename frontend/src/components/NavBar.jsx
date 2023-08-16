@@ -61,15 +61,6 @@ const NavBar = () => {
               Gallery
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="pricing"
-              className="text-white aria-[current=page]:text-[gold] hover:text-[gold]"
-              end
-            >
-              Pricing
-            </NavLink>
-          </li>
         </ul>
 
 

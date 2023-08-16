@@ -1,49 +1,31 @@
-.trainer-detail-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.trainer-info-section{
+  max-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
 }
-
 .trainer-info {
-  margin: 20px 0;
   text-align: center;
+  margin: auto;
 }
-
-.trainer-info img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 10px;
+.trainer-info img{
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  margin-bottom: 5px;
 }
-
-.trainer-info h1 {
-  font-size: 24px;
-  font-weight: bold;
-}
-
+.trainer-info h1{
+  font-size: 30px;
+} 
 .trainer-info p {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.trainer-info button {
-  padding: 10px 20px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
+  font-size: 24px;
 }
 
 .exercises {
-  width: 100%;
-  max-width: 600px;
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
 }
 
 .exercises h2 {
@@ -51,11 +33,12 @@
   margin-bottom: 10px;
   text-align: center;
 }
+
 .exercises ul {
-    margin-top: 20px; 
-    list-style: none; 
-    padding: 0; 
-  }
+  list-style: none;
+  padding: 0;
+  position: relative; 
+}
 
 .exercise-item {
   display: flex;
@@ -68,13 +51,11 @@
   cursor: pointer;
   position: relative;
 }
-.exercise-item {
-  position: relative;
-}
 
-.video-thumbnail-container {  
+
+.video-thumbnail-container {
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
@@ -102,24 +83,6 @@
   font-size: 18px;
 }
 
-.video-thumbnail {
-  width: 30px;
-  height: 30px;
-  background-size: cover;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.arrow-down {
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #000;
-}
-
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -145,35 +108,6 @@
 .video-player {
   max-width: 100%;
   max-height: 100%;
-}
-
-.video-controls {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-}
-
-.control-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  margin: 0 5px;
-}
-
-.control-button:focus {
-  outline: none;
-}
-
-.control-button:hover {
-  color: #4caf50;
-}
-
-.muted {
-  color: red;
 }
 
 @keyframes thumbnailPopUp {

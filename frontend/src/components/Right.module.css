@@ -1,0 +1,15 @@
+.line-container {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Move the container to the horizontal center of the div */
+    height: 100%; /* Make the container cover the full height of the div */
+    transform: translateX(-50%); /* Center the container */
+  }
+  
+  .line {
+    width: 1px; /* Set the width to draw a vertical line */
+    height: 100%; /* Make the line cover the full height of the container */
+    background-color: #000; /* Change the color as desired */
+    transform-origin: top; /* Set the transform origin to the top */
+    transform: rotate(-30deg); /* Rotate the line */
+  }
