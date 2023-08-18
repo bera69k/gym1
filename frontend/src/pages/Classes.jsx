@@ -1,5 +1,5 @@
-import Class from "../components/Class";
-import classes from "../components/Class.module.css";
+import Class from "../components/Class/Class";
+import classes from "../components/Class/Class.module.css";
 import { trainers } from "../components/Trainers";
 const Classes = () => {
 

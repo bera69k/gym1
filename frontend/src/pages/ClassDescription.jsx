@@ -1,4 +1,4 @@
-import ClassHelper from "../components/ClassHelper"
+import ClassHelper from "../components/Class/ClassHelper"
 
 
 const ClassDescription = () => {

@@ -14,7 +14,7 @@ div{
     position: absolute;
     right: 20px;
     top: 28px;
-    
+
 }
 
 .hamburger .bar, .hamburger::after, .hamburger::before{
@@ -38,12 +38,11 @@ div{
     background-color: white;
     margin-top: 100px;
     transition: 0.4s;
-    border-top-width: 4px;
     border-bottom-width: 4px;   
+    height: 100vh;
 }
 .nav.is-active{
-left: 0%;
-
+    left: 0;
 }
 .navLink {
     display: block;

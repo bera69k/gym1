@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { trainers } from "../components/Trainers";
+import { trainers } from "../../components/Trainers";
 import styles from "./ClassHelper.module.css";
 import ReactPlayer from "react-player";
 const ClassHelper = () => {

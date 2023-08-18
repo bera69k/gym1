@@ -3,7 +3,7 @@ import ss from "../assets/ss.png";
 import ss3 from "../assets/ss3.png";
 import { BsTelephone } from "react-icons/bs";
 import logo from "../assets/logo.png";
-import Footer from "../components/Footer2";
+import Footer from "../components/Footer/Footer2";
 import RightSideLocation from "../components/RightSideLocation";
 
 const Location = () => {

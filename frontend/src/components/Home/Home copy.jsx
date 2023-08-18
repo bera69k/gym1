@@ -1,8 +1,8 @@
-import hero from "../assets/hero.png";
+import hero from "../../assets/hero.png";
 import classes from "./Home.module.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { UserContext } from "../../context/userContext";
+import { UserContext } from "../../../context/userContext";
 
 const HomeS = () => {
   const { user } = useContext(UserContext);

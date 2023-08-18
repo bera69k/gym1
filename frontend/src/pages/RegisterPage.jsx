@@ -1,4 +1,4 @@
-import RegisterForm from '../components/DummyRegister'
+import RegisterForm from '../components/JoinForm/DummyRegister'
 
 const RegisterPage = () => {
   return (

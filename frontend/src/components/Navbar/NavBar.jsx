@@ -1,35 +1,28 @@
 import logo from "../../assets/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import { UserContext } from "../../../context/userContext";
 import MobileNav from "./MobileNav";
 
-
 const NavBar = () => {
-  const [isActive, setIsActive] = useState(false);
-
   const { user } = useContext(UserContext);
-  console.log("User data:", user);
   const navigate = useNavigate();
 
   const redirectHandler = () => {
     navigate(`/profile/${user.name}`);
   };
-  const menuToggleHandler = () => {
-    setIsActive((current) => !current);
-  };
 
   return (
     <>
-      <div className="bg-black flex drop-shadow-xl font-oswald relative h-23 font-medium">
+      <div className="bg-black relative flex drop-shadow-xl font-oswald m-0 h-23 font-medium w-screen">
         <Link to="/" className="absolute  ">
           <img
             src={logo}
             className="relative w-20 h-20 ml-4 cursor-pointer animate-left -delay-600 mt-2 justify-center"
           />
         </Link>
- 
+
         <ul className="flex   gap-4 m-auto text-white text-xl uppercase pl-0 hover:font-medium max-[600px]:hidden ">
           <li className="">
             <NavLink
@@ -87,7 +80,9 @@ const NavBar = () => {
           </svg>
         )}
       </div>
-      <MobileNav onClick={menuToggleHandler} isActive={isActive} redirect={redirectHandler}/>
+      <MobileNav
+        redirect={redirectHandler}
+      />
     </>
   );
 };

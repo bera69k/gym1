@@ -1,4 +1,4 @@
-import HomeS from "../components/Home copy"
+import HomeS from "../components/Home/Home copy"
 
 
 const Home = () => {

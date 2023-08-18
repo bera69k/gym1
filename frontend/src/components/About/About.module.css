@@ -1,0 +1,18 @@
+.button{
+    text-align: center;
+    justify-content: center;
+    border: 1px solid black;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 18px;
+    padding-left: 18px;
+    box-shadow: inset black;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+.button:hover {
+    box-shadow: inset 0 100px 0 0 black;
+    color: white;
+    
+  }
