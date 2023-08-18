@@ -1,11 +1,11 @@
 import Class from "../components/Class";
 import classes from "../components/Class.module.css";
 import { trainers } from "../components/Trainers";
-
 const Classes = () => {
 
   return (
     <>
+    <div   className={classes.bg}>
       <div className={classes.grid}>
         {trainers.map((trainer) => {
           return (
@@ -17,6 +17,7 @@ const Classes = () => {
             />
           );
         })}
+      </div>
       </div>
     </>
   );

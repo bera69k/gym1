@@ -13,6 +13,7 @@
   height: 500px;
   border-radius: 10px;
   margin-bottom: 5px;
+  object-fit: contain;
 }
 .trainer-info h1{
   font-size: 30px;

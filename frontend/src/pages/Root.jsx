@@ -1,14 +1,15 @@
 import { Outlet } from "react-router"
-import NavBar from "../components/NavBar"
+import NavBar from "../components/Navbar/NavBar"
 import { Toaster } from "react-hot-toast"
 
 const Root = () => {
 
   return (
     <>
-    <NavBar />
+
     <Toaster position="bottom-right" toastOptions={{duration:2000}}/>
         <main>
+        <NavBar />
             <Outlet/>
         </main>
     </>

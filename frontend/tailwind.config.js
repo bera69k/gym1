@@ -22,7 +22,8 @@ export default {
         '380': '380px'
       },
       colors:{
-        'gold': '#FFD700',
+        'red': '#FF2400',
+        'gold': '#FF',
         'shade': '#1B1212'
       },
       fontFamily: {

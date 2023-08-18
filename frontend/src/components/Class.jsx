@@ -1,6 +1,7 @@
 import classes from "./Class.module.css";
 import { useState } from "react";
 import {Link} from 'react-router-dom'
+
 const Class = (props) => {
   const [isHovering, setIsHovering] = useState(false);
   // eslint-disable-next-line react/prop-types
@@ -14,7 +15,7 @@ const Class = (props) => {
   };
 
   return (
-    <div className="text-center">
+    <div className={classes.main}>
       <div
         style={{ backgroundImage: `url(${image})` }}
         className={classes.box}
