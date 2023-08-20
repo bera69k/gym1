@@ -24,6 +24,8 @@ import deadlift from '../assets/Videos/thumbnails/deadlift.webp'
 import legpress from '../assets/Videos/thumbnails/legrpess.webp'
 import mikedbf from '../assets/Videos/mikeDBF.mp4'
 import mikedbfJPG from '../assets/Videos/thumbnails/mikedbf.jpg'
+import johndoe from '../assets/john-doe.png'
+import zena from '../assets/zena.webp'
 
 export const trainers = [
   {
@@ -46,10 +48,14 @@ export const trainers = [
       {
         text: "Dorian's training methods have transformed my physique! Highly recommended!",
         author: "John Doe",
+        authorImage: johndoe,
+        rating: 5, 
       },
       {
         text: "The course provided valuable insights into bodybuilding techniques.",
         author: "Jane Smith",
+        authorImage: zena,
+        rating: 4.3, 
       },
     ],
     faq: [
@@ -95,10 +101,14 @@ export const trainers = [
       {
         text: "David's course has changed the way I approach challenges in life!",
         author: "Sarah Johnson",
+        authorImage: zena,
+        rating: 4.5, 
       },
       {
         text: "His mental resilience techniques are powerful and inspiring.",
         author: "Michael Adams",
+        authorImage: johndoe,
+        rating: 5, 
       },
     ],
     faq: [
@@ -141,10 +151,14 @@ export const trainers = [
       {
         text: "Ronnie's course is a treasure trove of bodybuilding knowledge!",
         author: "Michael Thompson",
+        authorImage: johndoe,
+        rating: 5, 
       },
       {
         text: "I learned the proper form and technique to maximize my lifts.",
         author: "Jessica Green",
+        authorImage:zena,
+        rating: 5, 
       },
     ],
     faq: [
@@ -187,10 +201,14 @@ export const trainers = [
       {
         text: "Mike Mentzer's training approach helped me break through plateaus!",
         author: "Andrew Collins",
+        authorImage: johndoe,
+        rating: 4.3, 
       },
       {
         text: "I appreciate the emphasis on recovery and avoiding overtraining.",
         author: "Emily White",
+        authorImage: zena,
+        rating: 5, 
       },
     ],
     faq: [
@@ -232,10 +250,14 @@ export const trainers = [
       {
         text: "Tom Platz's leg training tips took my squats to the next level!",
         author: "Steven Adams",
+        authorImage: johndoe,
+        rating: 5, 
       },
       {
         text: "His passion for bodybuilding is truly inspiring.",
         author: "Amy Carter",
+        authorImage: zena,
+        rating: 5, 
       },
     ],
     faq: [
@@ -278,10 +300,14 @@ export const trainers = [
       {
         text: "Kevin Levrone's course helped me refine my posing and stage presence!",
         author: "Michelle Lee",
+        authorImage: zena,
+        rating: 5, 
       },
       {
         text: "I learned how to tailor my nutrition to fuel my workouts effectively.",
         author: "Mark Johnson",
+        authorImage: johndoe,
+        rating: 5, 
       },
     ],
     faq: [
@@ -323,10 +349,14 @@ export const trainers = [
       {
         text: "Chris Bumstead's Classic Physique course helped me improve my proportions!",
         author: "Alex Rivera",
+        authorImage: 'https://yt3.googleusercontent.com/lN8vE5uYnGBbMjl2eooSC2TTpDlfiYtWLCBtU_2lOQsepHEKW_2nyhpJ7hxBv_A2sv7-MCbI6w=s900-c-k-c0x00ffffff-no-rj',
+        rating: 5, 
       },
       {
         text: "I learned how to present my physique gracefully on stage.",
-        author: "Sophia Collins",
+        author: "Cortney Alexis King",
+        authorImage: 'https://www.muscleandfitness.com/wp-content/uploads/2016/09/PB31529.jpg?w=300&quality=40&strip=all',
+        rating: 4.5, 
       },
     ],
     faq: [
@@ -369,10 +399,14 @@ export const trainers = [
       {
         text: "Mike O'Hearn's course taught me how to balance fitness and my busy schedule.",
         author: "Lisa Adams",
+        authorImage: 'https://www.usatoday.com/gcdn/presto/2023/01/10/USAT/9abf6153-77ca-4cd6-8d36-8a495172056b-emily_robinson.jpeg?width=1200&disable=upscale&format=pjpg&auto=webp',
+        rating: 4, 
       },
       {
         text: "I appreciate his focus on overall athleticism and functional strength.",
         author: "Eric Thompson",
+        authorImage: 'https://pbs.twimg.com/media/FiZQn87X0AI-_kY?format=jpg&name=large',
+        rating: 4, 
       },
     ],
     faq: [
@@ -414,10 +448,14 @@ export const trainers = [
       {
         text: "Calum's course helped me embrace a classic bodybuilding approach!",
         author: "Robert Walker",
+        authorImage: 'https://steamuserimages-a.akamaihd.net/ugc/1997946697935212396/83D71DDE8FE99E2891081771B08CD7938D6100F6/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false',
+        rating: 5, 
       },
       {
         text: "I learned how to refine my posing and showcase my physique effectively.",
         author: "Emily Adams",
+        authorImage: 'https://p16-amd-va.axod.net/obj/tos-maliva-p-0068/a13d1a38de02902e3d45a9e39f84947c.jpg?x-expires=1692892894&x-signature=omXJxeHQonNpmzz91q0i9DuavpD5b5p3rfCFekOO%3D',
+        rating: 4.5, 
       },
     ],
     faq: [
@@ -460,10 +498,14 @@ export const trainers = [
       {
         text: "Frank Zane's approach to aesthetics elevated my bodybuilding game!",
         author: "Thomas Anderson",
+        authorImage: "https://i1.sndcdn.com/artworks-tFqLwOpPeGOaZeW0-L4pGtA-t500x500.jpg",
+        rating: 5, 
       },
       {
         text: "I learned how to create a balanced and symmetrical physique.",
         author: "Sophia Parker",
+        authorImage: 'https://w0.peakpx.com/wallpaper/260/66/HD-wallpaper-irina-dreyt-portrait-display-brunette-women-outdoors-model-smartphone-pants-side-view-depth-of-field-women-sunlight-hat-ass-women-with-glasses-profile-sea-thumbnail.jpg',
+        rating: 4, 
       },
     ],
     faq: [
@@ -506,10 +548,14 @@ export const trainers = [
       {
         text: "Jay Cutler's course provided valuable insights to take my bodybuilding to the next level!",
         author: "Alex Thompson",
+        authorImage: 'https://res.cloudinary.com/fleetnation/image/private/c_fit,w_1120/g_south,l_text:style_gothic2:%C2%A9%20Michael%20Osterrieder,o_20,y_10/g_center,l_watermark4,o_25,y_50/v1536739214/pt5jhbphubanbzqy19ir.jpg',
+        rating: 5, 
       },
       {
         text: "I learned how to fine-tune my diet and workouts for optimal results.",
         author: "Sophia Williams",
+        authorImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfYTbrBCi7fEvWLoOXGl5D36WsLdVAkPKYjQ&usqp=CAU',
+        rating: 5, 
       },
     ],
     faq: [
@@ -552,10 +598,14 @@ export const trainers = [
       {
         text: "Flex Wheeler's posing techniques took my bodybuilding stage presence to new heights!",
         author: "Michael Brooks",
+        authorImage: 'https://wallpapercave.com/wp/wp7578910.jpg',
+        rating: 5, 
       },
       {
         text: "I learned how to sculpt my physique for aesthetic appeal.",
         author: "Emily Collins",
+        authorImage: 'https://i.pinimg.com/1200x/39/60/e2/3960e2aa41c5f2a305ba9185700dfdba.jpg',
+        rating: 5, 
       },
     ],
     faq: [
@@ -597,10 +647,14 @@ export const trainers = [
       {
         text: "Larry Scott's legacy in bodybuilding lives on through his course!",
         author: "Michael Adams",
+        authorImage: johndoe,
+        rating: 4, 
       },
       {
         text: "I learned the importance of aesthetics and symmetry in bodybuilding.",
         author: "Emily Wilson",
+        authorImage: zena,
+        rating: 3.5, 
       },
     ],
     faq: [
@@ -643,10 +697,14 @@ export const trainers = [
       {
         text: "Arnold's course inspired me to pursue bodybuilding as a lifelong journey!",
         author: "Thomas Johnson",
+        authorImage: "https://people.com/thmb/ADBOAkfhESlZjkEn8_1O_KMzK6M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(539x0:541x2):format(webp)/joseph-baena-1-1-70970815e6bf49f3b15e841c72751ca5.jpg",
+        rating: 5, 
       },
       {
         text: "I learned the importance of setting clear goals and staying committed.",
         author: "Sophia Roberts",
+        authorImage: "https://preview.redd.it/new-lean-beef-patty-post-it-could-be-lighting-but-that-back-v0-2y0j5ggfwdab1.png?auto=webp&s=0aed27abb4ccca78c41519668b2580bb2700a127",
+        rating: 5, 
       },
     ],
     faq: [

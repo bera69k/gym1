@@ -1,28 +1,13 @@
 .main {
-  margin-top: -10px;
   text-align: center;
-  
+
 }
 .bg {
   -webkit-box-shadow: inset -5px -17px 140px 11px rgba(0,0,0,1);
   -moz-box-shadow: inset -5px -17px 140px 11px rgba(0,0,0,1);
   box-shadow: inset -5px -17px 140px 11px rgba(0,0,0,1);
-
+  height: 831px;
 }
-
-/* .bg::before{
-  content: "";
-  background-size: cover;
-  position: absolute;
-  top: 100px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 1;
-   -webkit-box-shadow: inset -5px -17px 140px 11px rgba(0,0,0,1);
-  -moz-box-shadow: inset -5px -17px 140px 11px rgba(0,0,0,1);
-  box-shadow: inset -5px -17px 140px 11px rgba(0,0,0,1); 
-} */
 .grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);

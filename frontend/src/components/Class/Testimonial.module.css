@@ -1,0 +1,76 @@
+.mainContainer{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.testContainer{
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: white;
+    display: inline-flex;
+    text-align: center;
+    height: 350px;
+    margin: 300px 20px;
+}
+.containerInfo{
+    display: grid;
+    grid:
+      "header" auto
+      "main" 1fr;
+    gap: 8px;
+}
+
+.authorInfo{
+    grid-area: header;
+    text-align: center;
+    margin: auto;
+}
+.authorIMG {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    text-align: center;
+    margin: auto;
+  }
+  .authorName{
+    margin-top: 5px;
+    font-size: 20px;
+  }
+.authorText{
+    grid-area: main;
+    margin-top: 20px;
+    font-size: 24px;
+}
+.starRating{
+    font-size: 32px;
+}
+.star-icon {
+    color: #ccc;
+  }
+  
+  .star-icon-filled {
+    color: rgba(255, 193, 0, 1);
+  }
+  
+  .star-icon-half-filled {
+    background: linear-gradient(to right, rgba(255, 193, 0, 1) 50%, rgba(255,193,0,0.2) 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .testContainer:nth-child(odd) .star-icon:nth-child(odd),
+  .testContainer:nth-child(even) .star-icon:nth-child(even) {
+    color: rgba(255, 223, 0, 0.2); 
+  }
+  
+  .testContainer:nth-child(odd) .star-icon-filled:nth-child(odd),
+  .testContainer:nth-child(even) .star-icon-filled:nth-child(even) {
+    color: rgba(255, 193, 0, 1); 
+  }

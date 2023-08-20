@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { trainers } from "../../components/Trainers";
 import styles from "./ClassHelper.module.css";
 import ReactPlayer from "react-player";
+import Testimonial from "./Testimonial";
 const ClassHelper = () => {
   const { id } = useParams();
   const trainer = trainers.find((trainer) => trainer.id === Number(id));
@@ -33,11 +34,14 @@ const ClassHelper = () => {
     return <div>Trainer not found</div>;
   }
   return (
+    <>
+    <div className={styles.line}>
+    </div>
     <div className={styles["class-helper-container"]}>
       {/* Trainer Information Section */}
       <div className={styles["trainer-info-section"]}>
         <div className={styles["trainer-info"]}>
-          <img src={trainer.img} alt={trainer.num}  />
+          <img src={trainer.img} alt={trainer.num} className={styles.imgs}  />
           <h1>{trainer.num}</h1>
           <p>Price for the course: ${trainer.price}</p>
 
@@ -53,7 +57,7 @@ const ClassHelper = () => {
                 onMouseLeave={handleMouseLeave}
                 onClick={() => handleVideoThumbnailClick(exercise.video)}
               >
-                <span>{exercise.name}</span>
+                {exercise.name}
                 <div
                   className={`${styles["video-thumbnail-container"]} ${
                     showThumbnail &&
@@ -64,8 +68,10 @@ const ClassHelper = () => {
                 ></div>
               </li>
             ))}
+            
           </ul>
-          <button>Enroll in the Class</button>
+          <p className={styles.desc}>Enroll in the class to see the rest of the program</p>
+          <button className={styles.button}>Enroll in the Class</button>
         </div>
       </div>                
     
@@ -106,6 +112,10 @@ const ClassHelper = () => {
         </div>
       )}
     </div>
+    <div>
+      <Testimonial trainer={trainer}/>
+    </div>
+    </>
   );
 };
 

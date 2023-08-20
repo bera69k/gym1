@@ -1,3 +1,4 @@
+
 .ul {
     display:flex;
   }
@@ -14,10 +15,12 @@
     font-size:30px;
     text-align:center;
     text-decoration:none;
+    justify-content: center;
     color:white;
-    margin: 0 20px;
+    margin: 70px 20px;
     transition:0.5s;
     cursor: pointer;
+    margin-bottom: 0;
   }
 .span1, .span2, .span3, .span4 {
     position:absolute;
@@ -126,6 +129,8 @@
     .li{
       text-align: center;
       margin: auto;
-
+    }
+    .a{
+      margin: 0 20px;
     }
   }
