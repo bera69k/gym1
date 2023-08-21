@@ -36,6 +36,7 @@ const Testimonial = ({ trainer }) => {
   const testimonials = trainer.testimonials;
 
   return (
+    <>
     <div className={classes.mainContainer}>
       {testimonials.map((testimonial, index) => (
         <div key={index} className={classes.testContainer}>
@@ -56,6 +57,7 @@ const Testimonial = ({ trainer }) => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 

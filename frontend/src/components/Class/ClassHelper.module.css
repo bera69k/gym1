@@ -7,10 +7,14 @@
   top: 40%;
 } */
 .class-helper-container{
-  background-image: url('https://img.freepik.com/free-photo/abstract-luxury-blur-dark-grey-black-gradient-used-as-background-studio-wall-display-your-products_1258-63996.jpg');
-  background-size: cover;
+
   color: white;
   text-transform: uppercase;
+  background-image: url('https://img.freepik.com/free-photo/abstract-luxury-blur-dark-grey-black-gradient-used-as-background-studio-wall-display-your-products_1258-63996.jpg');
+  background-size: cover;
+  box-shadow: 10px 46px 124px 0px rgba(0,0,0,0.75) inset;
+-webkit-box-shadow: 10px 46px 124px 0px rgba(0,0,0,0.75) inset;
+-moz-box-shadow: 10px 46px 124px 0px rgba(0,0,0,0.75) inset;
 }
 
 .trainer-info-section{
