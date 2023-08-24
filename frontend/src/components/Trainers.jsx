@@ -27,8 +27,9 @@ import mikedbfJPG from '../assets/Videos/thumbnails/mikedbf.jpg'
 import johndoe from '../assets/john-doe.png'
 import zena from '../assets/zena.webp'
 
-export const trainers = [
+export const  trainers = [
   {
+    classId:15,
     id: 1,
     num: "Dorian Yates",
     img: dorian,
@@ -82,6 +83,7 @@ export const trainers = [
     ],
   },
   {
+    classId:25,
     id: 2,
     num: "David Goggins",
     img: david1,
@@ -132,6 +134,7 @@ export const trainers = [
   },
   // ... Other trainers with their respective information.
   {
+    classId:35,
     id: 3,
     num: "Ronnie Coleman",
     img: ronnie,
@@ -182,12 +185,13 @@ export const trainers = [
   },
 
   {
+    classId:45,
     id: 4,
     num: "Mike Mentzer",
     img: mike,
     description: "Mike Mentzer was an American professional bodybuilder known for his Heavy Duty training philosophy.",
     exercises: [
-      { name: "Exercise 1", video: mikedbf, thumbnail: mikedbfJPG },
+      { name: "Incline Dumbbell Flies", video: mikedbf, thumbnail: mikedbfJPG },
       { name: "Exercise 2", video: "", thumbnail: "" },
     ],
     price: "49",
@@ -231,6 +235,7 @@ export const trainers = [
     ],
   },
   {
+    classId:55,
     id: 5,
     num: "Tom Platz",
     img: tom,
@@ -281,6 +286,7 @@ export const trainers = [
   },
 
   {
+    classId:65,
     id: 6,
     num: "Kevin Levrone",
     img: kevin1,
@@ -330,6 +336,7 @@ export const trainers = [
     ],
   },
   {
+    classId:75,
     id: 7,
     num: "Chris Bumstead",
     img: chris,
@@ -380,6 +387,7 @@ export const trainers = [
   },
 
   {
+    classId:85,
     id: 8,
     num: "Mike O'Hearn",
     img: mikeohearn,
@@ -429,6 +437,7 @@ export const trainers = [
     ],
   },
   {
+    classId:95,
     id: 9,
     num: "Calum Von Moger",
     img: calum,
@@ -479,6 +488,7 @@ export const trainers = [
   },
 
   {
+    classId:105,
     id: 10,
     num: "Frank Zane",
     img: frank,
@@ -529,6 +539,7 @@ export const trainers = [
   },
   
   {
+    classId:115,
     id: 11,
     num: "Jay Cutler",
     img: jay,
@@ -579,6 +590,7 @@ export const trainers = [
   },
 
   {
+    classId:125,
     id: 12,
     num: "Flex Wheeler",
     img: flex,
@@ -628,6 +640,7 @@ export const trainers = [
     ],
   },
   {
+    classId:135,
     id: 13,
     num: "Larry Scott",
     img: larry,
@@ -678,6 +691,7 @@ export const trainers = [
   },
 
   {
+    classId:145,
     id: 14,
     num: "Arnold Schwarzenegger",
     img: arnold,
@@ -727,3 +741,4 @@ export const trainers = [
     ],
   },
 ];
+

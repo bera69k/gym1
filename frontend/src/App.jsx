@@ -15,7 +15,6 @@ import Profile from "./pages/Profile";
 import ClassDescription from "./pages/ClassDescription";
 
 
-
 const router = createBrowserRouter([
   {path:'/', element:<Root/>, children:[
     {index:true, element:<Home/>},
@@ -36,11 +35,13 @@ axios.defaults.baseURL = 'http://localhost:8000'
 axios.defaults.withCredentials = true
 
 function App() {
+
+
   
   return (
     <UserContextProvider>
-     <RouterProvider router={router} />
-     </UserContextProvider>
+     <RouterProvider   router={router} />  
+      </UserContextProvider>
   );
 }
 

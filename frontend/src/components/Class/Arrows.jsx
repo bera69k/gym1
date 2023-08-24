@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useNavigate } from "react-router";
 import classes from './Arrows.module.css'
 const Arrows = ({ id }) => {

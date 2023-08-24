@@ -1,17 +1,36 @@
-import { useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { trainers } from "../../components/Trainers";
 import styles from "./ClassHelper.module.css";
 import ReactPlayer from "react-player";
 import Testimonial from "./Testimonial";
 import Arrows from "./Arrows";
+import axios from 'axios'
+import { UserContext } from "../../../context/userContext";
+import toast from 'react-hot-toast'
+import Footer from '../Footer/Footer2'
 const ClassHelper = () => {
   const { id } = useParams();
   const trainer = trainers.find((trainer) => trainer.id === Number(id));
-
+  const {user} =useContext(UserContext)
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [hoveredVideo, setHoveredVideo] = useState(null);
   const [showThumbnail, setShowThumbnail] = useState(false);
+  const [enrollmentData, setEnrollmentData] = useState({
+    userId: user ? user.id : null,
+    trainerName: trainer.num,
+    price: trainer.price,
+  });
+
+  useEffect(() => {
+    if (user && trainer) {
+      setEnrollmentData({
+        userId: user.id,
+        trainerName: trainer.num,
+        price: trainer.price,
+      });
+    }
+  }, [ user,trainer]);
 
   const handleMouseEnter = (video) => {
     setHoveredVideo(video);
@@ -33,6 +52,31 @@ const ClassHelper = () => {
   if (!trainer) {
     return <div>Trainer not found</div>;
   }
+  const enrollInClass = async () => {
+    console.log('User:', user);
+    try {
+      const response = await axios.post('http://localhost:8000/api/enroll', enrollmentData, {
+        withCredentials: true, 
+      });
+  
+      console.log(response.data.message);
+      toast.success('SUCCESSFULLY ENROLLED 🎉');
+    } catch (error) {
+      if (error.response) {
+        console.error('Error enrolling:', error.response.data.error);
+        if (error.response.data.error === 'Already enrolled') {
+          toast.error('YOU\'RE ALREADY ENROLLED! 🙅‍♂️');
+        } else {
+          toast.error('An error occurred. Please try again later.');
+        }
+      } else {
+        console.error('Error enrolling:', error.message);
+        toast.error('An error occurred. Please try again later.');
+      }
+    }
+  };
+
+
   return (
     <>
       <div className={styles["class-helper-container"]}>
@@ -70,7 +114,11 @@ const ClassHelper = () => {
             <p className={styles.desc}>
               Enroll in the class to see the rest of the program
             </p>
-            <button className={styles.button}>Enroll in the Class</button>
+            {user ? (
+  <button className={styles.button} onClick={enrollInClass}>Enroll in the Class</button>
+) : (
+  <p>Please log in to enroll and access the full program.</p>
+)}
           </div>
         </div>
         {/* Video Modal */}
@@ -88,6 +136,7 @@ const ClassHelper = () => {
       <div>
         <Testimonial trainer={trainer} />
       </div>
+      <Footer/>
     </>
   );
 };
