@@ -63,11 +63,13 @@ const loginUser = async (req, res) => {
         {},
         (err, token) => {
           if (err) throw err;
-          res.cookie("token", token,{
-            httpOnly: true,
-            secure: true,
-            sameSite: "strict",
-          }).json(user);
+          res
+            .cookie("token", token, {
+              httpOnly: true,
+              secure: true,
+              sameSite: "strict",
+            })
+            .json(user);
         }
       );
     }
@@ -85,36 +87,51 @@ const loginUser = async (req, res) => {
 const getProfile = (req, res) => {
   const { token } = req.cookies;
   if (token) {
-    jwt.verify(token, process.env.JWT_SECRET, {}, (err, user) => {
-      if (err) throw err;
+    jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+      if (err) {
+        // Invalid token or expired, send response indicating no user is authenticated
+        return res.json(null);
+      }
+      // Token is valid, send user information
       res.json(user);
     });
   } else {
+    // No token, send response indicating no user is authenticated
     res.json(null);
   }
 };
-const logOut = async (req, res)=>{
-  const cookies = req.cookies;
-  if(!cookies?.jwt) return res.sendStatus(204);
-  const refreshToken = cookies.jwt
-  const foundUser = await User.findOne({refreshToken}).exec();
-  if(!foundUser){
-    res.clearCookie('jwt',{httpOnly:true,sameSite:'None',secure:true});
-    return res.sendStatus(204)
-  }
-  foundUser.refreshToken = '';
-  const result = await foundUser.save();
-  console.log(result)
 
-  res.clearCookie('jwt',{httpOnly: true,sameSite:'None', secure:true});
-  res.sendStatus(204)
-}
+// const logOut = async (req, res) => {
+//   const cookies = req.cookies;
+//   if (!cookies?.jwt) return res.sendStatus(204);
+//   const refreshToken = cookies.jwt;
+//   const foundUser = await User.findOne({ refreshToken }).exec();
+//   res.clearCookie("token", {
+//     httpOnly: true,
+//     secure: true,
+//     sameSite: "strict",
+//     // Add any other relevant options
+//   });
+//   if (!foundUser) {
+//     res.clearCookie("jwt", { httpOnly: true, sameSite: "None", secure: true });
+//     return res.sendStatus(204);
+//   }
+//   foundUser.refreshToken = "";
+//   const result = await foundUser.save();
+//   console.log(result);
 
+//   res.clearCookie("jwt", { httpOnly: true, sameSite: "None", secure: true });
+//   res.sendStatus(204);
+// };
+// const logOut = async (req, res) => {
+//   res.clearCookie('jwt', { httpOnly: true, sameSite: 'None', secure: true });
+//   res.sendStatus(204);
+// };
 
 module.exports = {
   test,
   registerUser,
   loginUser,
   getProfile,
-  logOut,
+  // logOut,
 };

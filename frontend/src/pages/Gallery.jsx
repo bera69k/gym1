@@ -1,8 +1,12 @@
-
+import Footer from "../components/Footer/Footer2"
+import GalleryComponent from "../components/Gallery/GalleryComponent"
 
 const Gallery = () => {
   return (
-    <div>Gallery</div>
+    <>
+      <GalleryComponent/>
+      <Footer/>
+    </>
   )
 }
 

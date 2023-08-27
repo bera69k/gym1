@@ -17,9 +17,10 @@ const ClassHelper = () => {
   const [hoveredVideo, setHoveredVideo] = useState(null);
   const [showThumbnail, setShowThumbnail] = useState(false);
   const [enrollmentData, setEnrollmentData] = useState({
-    userId: user ? user.id : null,
+    userId: user.id ,
     trainerName: trainer.num,
     price: trainer.price,
+    expirationDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
   });
 
   useEffect(() => {
@@ -63,14 +64,15 @@ const ClassHelper = () => {
       toast.success('SUCCESSFULLY ENROLLED 🎉');
     } catch (error) {
       if (error.response) {
-        console.error('Error enrolling:', error.response.data.error);
         if (error.response.data.error === 'Already enrolled') {
           toast.error('YOU\'RE ALREADY ENROLLED! 🙅‍♂️');
+        } else if (error.response.data.error === 'Enrollment limit reached') {
+          toast.error('You\'ve reached the maximum number of enrollments.🙅‍♂️');
         } else {
           toast.error('An error occurred. Please try again later.');
         }
       } else {
-        console.error('Error enrolling:', error.message);
+
         toast.error('An error occurred. Please try again later.');
       }
     }

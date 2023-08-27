@@ -70,7 +70,7 @@ const NavBar = () => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-10 h-10 mr-10 mt-7 text-white cursor-pointer max-[600px]:hidden "
+            className="w-10 h-10 mr-10 mt-7 text-white cursor-pointer max-[600px]:hidden  hover:text-[red] aria-[current=page]:text-[red]"
           >
             <path
               strokeLinecap="round"

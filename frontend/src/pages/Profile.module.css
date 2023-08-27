@@ -1,12 +1,38 @@
+.main{
+    position: relative;
+    height: 100vh;
+}
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/ass.png');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(60%);
+  }
+
+
 .container{
     display: grid;
     grid-template-columns: 1fr 2fr;
+    position: relative;
+    z-index: 2;
 }
 
 .personal-info-container{
     margin: auto;
     text-align: left; 
-    margin-top: 100px;   
+    margin-top: 100px; 
+    border: 1px solid black;
+    background-color: white;
+    padding: 40px 60px;
+    border-radius: 20px;  
+    box-shadow: -6px 10px 34px 2px rgba(255,0,0,0.58);
+-webkit-box-shadow: -6px 10px 34px 2px rgba(255,0,0,0.58);
+-moz-box-shadow: -6px 10px 34px 2px rgba(255,0,0,0.58);
 }
 .profileImg{
     border-radius: 50%;
@@ -14,7 +40,79 @@
     height:200px;
     object-fit: cover;
 }
+.secondCotnainer{
+        margin: auto;
+        /* /* background-color: white; */
+} 
 .enrolledClasses{
+    height: fit-content;
+    width: 600px;
+    box-shadow: -6px 16px 26px 1px rgba(0,0,0,0.14);
+    -webkit-box-shadow: -6px 16px 26px 1px rgba(0,0,0,0.14);
+    -moz-box-shadow: -6px 16px 26px 1px rgba(0,0,0,0.14);
+    text-align: left;
+    margin: auto;
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px 0px;
+    box-shadow: -6px 10px 34px 2px rgba(255,0,0,0.58);
+-webkit-box-shadow: -6px 10px 34px 2px rgba(255,0,0,0.58);
+-moz-box-shadow: -6px 10px 34px 2px rgba(255,0,0,0.58);
+border: 1px solid black;
+}
+.enrollmentContainer{
+    display: inline-flex;
+
+}
+
+.enrollment {
+    width: max-content;
+    height: 50px;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 24px;
+    margin: auto;
+}
+.enrollment:nth-child(1){
+    margin-top: 10px;
+}
+
+.expiration{
+    top: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: white;
+    height: 100px;
+    width: 350px;
+    display: none;
+    position: absolute;
+    left: 32.8%;
+    text-align: center;
+    margin: auto;
+    transition: 0.5s ease-in;
+    box-shadow: -6px 10px 34px 2px rgba(255,0,0,0.58);
+    -webkit-box-shadow: -6px 10px 34px 2px rgba(255,0,0,0.58);
+    -moz-box-shadow: -6px 10px 34px 2px rgba(255,0,0,0.58);
+}
+.enrollment:hover .expiration{
+    display: block;
+}
+/* .enrollment:hover .expiration:nth-child(2){
+    top: 100px;
+    left: 100px;
+    display: block;
+} */
+
+.cancel {
+  padding-right: 40px;
+  float: right;
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+  font-size: larger;
+}
+.cancel:hover{
+    color: #a8160c;
 
 }
 .nameEmail{
@@ -24,7 +122,7 @@
 .name{
     font-size: 42px;
     text-transform: uppercase;
-    margin-top: 17px;
+    margin-top: 30px;
 }
 .email{
     font-size: 24px;
@@ -37,11 +135,65 @@
     height: 40px;
     border-radius: 50%;
     border:1px solid #a8160c;
-    
 }
 .upload:hover{
     border: none;
     background-color: #a8160c;
-    transition: 0.3s ease-in;
-    color: white
+    transition: 0.3s ease-in-out;
+    color: white;
+    animation:  pop 0.3s forwards;
+}
+.buttonWrapper{
+    margin: auto;
+    text-align: center;
+}
+.button{
+    border: 1px solid #a8160c;
+    padding: 10px 20px;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: inset #a8160c;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+}
+.button:hover{
+    background-color: #a8160c;
+    transition: 0.6s ease-in-out;
+    color: white;
+    animation:  pop 0.3s forwards;
+    box-shadow: inset 0 100p x 0 0 #a8160c;
+}
+.totalAmount{
+    background-color: white;
+    padding: 20px 40px;
+    font-size: 32px;
+    border-radius: 20px;
+    box-shadow: -6px 10px 34px 2px rgba(255,0,0,0.58);
+-webkit-box-shadow: -6px 10px 34px 2px rgba(255,0,0,0.58);
+-moz-box-shadow: -6px 10px 34px 2px rgba(255,0,0,0.58);
+}
+
+@keyframes pop {
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.3
+    }
+    100%{
+        scale: 1.1     
+    }
+}
+@keyframes up {
+    0%{
+        opacity: 0;
+        top:70%
+    }
+    50%{
+        opacity: 0.6;
+    }
+    100%{
+        top:50%
+    }
 }

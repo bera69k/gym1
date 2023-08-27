@@ -9,10 +9,13 @@ import Location from "./pages/Location";
 import Error from "./pages/Error";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
-import { UserContextProvider } from "../context/userContext";
 import axios from 'axios'
 import Profile from "./pages/Profile";
 import ClassDescription from "./pages/ClassDescription";
+
+
+// import ProtectedProfileRoute from "./pages/ProtectedProfileRoute";
+
 
 
 const router = createBrowserRouter([
@@ -26,7 +29,8 @@ const router = createBrowserRouter([
     {path:'pricing', element:<Pricing/>},
     {path:'login' ,element:<LoginPage/>},
     {path:'register' ,element:<RegisterPage/>},
-    {path:`profile/:username`, element:<Profile/>}
+    { path: `profile/:username`,element:<Profile />}
+
   ]},
   {path:'*', element:<Error/>}
 ])
@@ -36,12 +40,8 @@ axios.defaults.withCredentials = true
 
 function App() {
 
-
-  
   return (
-    <UserContextProvider>
-     <RouterProvider   router={router} />  
-      </UserContextProvider>
+     <RouterProvider router={router}/>  
   );
 }
 
