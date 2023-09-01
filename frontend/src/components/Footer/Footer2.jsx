@@ -3,13 +3,13 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black  grid w-screen grid-cols-3  h-48 text-center text-white  bottom-0 max-[600px]:grid max-[600px]:grid-rows-3  max-[600px]:grid-cols-1 max-[600px]:h-screen ">
+      <footer className="bg-black  grid w-screen grid-cols-3  h-48 text-center text-white  bottom-0 -md:grid -md:grid-rows-3  -md:grid-cols-1 -md:h-screen -xl:h-screen ">
         <div className=" m-auto">
           <h1 className="uppercase text-3xl text-white">work harder with us</h1>
           <p className="uppercase text-xl">Biggest industry in our region</p>
           <p className="uppercase">Achilles Gym &reg;</p>
         </div>
-        <div className="m-auto max-[600px]:-mt-6">
+        <div className="m-auto -md:-mt-6">
           <h1 className="text-3xl uppercase ">Get in touch</h1>
           <p className="my-2 underline hover:cursor-pointer">
             placeholder@placeholder.com
@@ -18,8 +18,8 @@ const Footer = () => {
             placeholder@placeholder.com
           </p>
         </div>
-        <div className="links">
-          <ul className="ul">
+        <div className="links ">
+          <ul className="ul -md:grid -md:grid-cols-1 -md-grid-rows-4 -xl:grid -xl:grid-cols-2 -xl-grid-rows-2">
             <li className="li">
               <Link className="a facebook">
                 <span className="span1"></span>

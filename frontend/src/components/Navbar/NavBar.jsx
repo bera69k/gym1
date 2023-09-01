@@ -23,7 +23,7 @@ const NavBar = () => {
           />
         </Link>
 
-        <ul className="flex   gap-4 m-auto text-white text-xl uppercase pl-0 hover:font-medium max-[600px]:hidden ">
+        <ul className="flex   gap-4 m-auto text-white text-xl uppercase pl-0 hover:font-medium -md:hidden ">
           <li className="">
             <NavLink
               to=""
@@ -70,7 +70,7 @@ const NavBar = () => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-10 h-10 mr-10 mt-7 text-white cursor-pointer max-[600px]:hidden  hover:text-[red] aria-[current=page]:text-[red]"
+            className="w-10 h-10 mr-10 mt-7 text-white cursor-pointer -md:hidden  hover:text-[red] aria-[current=page]:text-[red]"
           >
             <path
               strokeLinecap="round"

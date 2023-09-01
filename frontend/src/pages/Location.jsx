@@ -47,8 +47,8 @@ const Location = () => {
 
   return (
     <>
-      <div className="grid grid-cols-3 h-screen ">
-        <div className="  bg-gray-100">
+      <div className="grid grid-cols-3  -md:grid -md:grid-cols-1 -xl:grid-cols-2 -xl:grid-rows-1 ">
+        <div className="  bg-gray-100 -md:h-screen">
           <h1 className="text-3xl mt-32 mb-6 m-auto text-center">
             You can find us here
           </h1>
@@ -65,7 +65,7 @@ const Location = () => {
             Feeling Lost? Click on Google Maps and find a way to US!
           </div>
         </div>
-        <div className="h-screen bg-slate-900 text-center">
+        <div className="h-screen bg-slate-900 text-center -md:h-screen">
           <img src={ss3} className="w-100" />
           <p className="text-white text-center text-xl mt-3">
             Vogelsangstrasse 11, 8400 Winterthur, Switzerland
@@ -91,7 +91,7 @@ const Location = () => {
             className="mt-10 text-center m-auto h-48 w-48 text-black"
           />
         </div>
-        <div className="grid grid-rows-8 divide-y  bg-slate-100">
+        <div className="grid grid-rows-8 divide-y  bg-slate-100 -md:h-screen -xl:w-screen">
           {trainers.map((trainer) => (
             <RightSideLocation
               key={trainer.day}
