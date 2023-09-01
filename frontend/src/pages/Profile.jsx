@@ -19,6 +19,7 @@ const Profile = () => {
     if (user && user.id) {
       fetchEnrolledClasses(user.id);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   useEffect(() => {
@@ -58,9 +59,13 @@ const Profile = () => {
             </button>
           </div>
         </div>
-        <div className={classes.enrolledClasses}>
-          {enrolledClasses.length > 0 && (
-            <div className="">
+        <div className={classes.second}>
+          {enrolledClasses.length === 0 ? (<div>
+            <h3 className="text-white  text-5xl">No Currently Enrolled Classes</h3>
+            <button className={classes.enrollButton}>Enroll Now!</button>
+          </div>) : (
+            <div className={classes.enrolledClasses}>
+              
               <h3 className="text-center text-4xl">Enrolled Classes</h3>
               <ul>
                 {enrolledClasses.map((enrollment) => (

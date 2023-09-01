@@ -19,7 +19,8 @@ export default {
       },
       width:{
         '350': '350px',
-        '380': '380px'
+        '380': '380px',
+        '800':'800px'
       },
       colors:{
         'red': '#FF2400',

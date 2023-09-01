@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import david1 from "../assets/david1.jpg";
 import dorian from "../assets/dorian.jpg";
 import ronnie from "../assets/ronnie.png";
@@ -32,7 +33,7 @@ export const  trainers = [
     classId:15,
     id: 1,
     num: "Dorian Yates",
-    img: dorian,
+    img: 'https://qph.cf2.quoracdn.net/main-qimg-8d2f002ba519bb31b8f5eb5b427e8770-lq',
     description: "Dorian Yates is a retired British professional bodybuilder known for his intense training methods and six-time Mr. Olympia victories.",
     exercises: [
       { name: "Leg Extensions", video: LEDY, thumbnail: LEDY2 },
@@ -188,7 +189,7 @@ export const  trainers = [
     classId:45,
     id: 4,
     num: "Mike Mentzer",
-    img: mike,
+    img: 'https://thebodybuildingarchive.com/wp-content/uploads/2022/07/mike-mentzer-vacuum.jpg',
     description: "Mike Mentzer was an American professional bodybuilder known for his Heavy Duty training philosophy.",
     exercises: [
       { name: "Incline Dumbbell Flies", video: mikedbf, thumbnail: mikedbfJPG },
@@ -289,7 +290,7 @@ export const  trainers = [
     classId:65,
     id: 6,
     num: "Kevin Levrone",
-    img: kevin1,
+    img: 'https://iv1.lisimg.com/image/856025/556full-kevin-levrone.jpg',
     description: "Kevin Levrone is an American former professional bodybuilder and actor known for his powerful physique and charisma on stage.",
     exercises: [
       { name: "Exercise 1", video: "", thumbnail: "" },
@@ -339,7 +340,7 @@ export const  trainers = [
     classId:75,
     id: 7,
     num: "Chris Bumstead",
-    img: chris,
+    img: 'https://www.bodybuildingmealplan.com/wp-content/uploads/Chris-Bumstead-Arm-Measurement.jpg',
     description: "Chris Bumstead is a Canadian IFBB professional bodybuilder and Classic Physique Olympia champion.",
     exercises: [
       { name: "Exercise 1", video: "", thumbnail: "" },
@@ -390,7 +391,7 @@ export const  trainers = [
     classId:85,
     id: 8,
     num: "Mike O'Hearn",
-    img: mikeohearn,
+    img: 'https://i.pinimg.com/originals/ee/3e/c3/ee3ec30fb7ca84bba7bbaffa5525c2e6.jpg',
     description: "Mike O'Hearn is an American IFBB professional bodybuilder, actor, and fitness model.",
     exercises: [
       { name: "Exercise 1", video: "", thumbnail: "" },
@@ -643,7 +644,7 @@ export const  trainers = [
     classId:135,
     id: 13,
     num: "Larry Scott",
-    img: larry,
+    img: 'https://www.ironmanmagazine.com/wp-content/uploads/larryscott-genemozee3.jpg',
     description: "Larry Scott was an American professional bodybuilder known for being the first Mr. Olympia winner.",
     exercises: [
       { name: "Exercise 1", video: "", thumbnail: "" },

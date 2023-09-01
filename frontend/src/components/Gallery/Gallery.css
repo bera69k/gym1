@@ -1,20 +1,25 @@
 .bg{
     height: 100%;
-    width: 100%;
+    width: 100vw;
     -webkit-box-shadow: inset -5px -17px 140px 11px rgba(0, 0, 0, 1);
     -moz-box-shadow: inset -5px -17px 140px 11px rgba(0, 0, 0, 1);
     box-shadow: inset -5px -17px 140px 11px rgba(0, 0, 0, 1);
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(107, 5, 5, 0.4)), url('../../assets/ass.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-
 .container{
     margin: auto;
     padding: 40px 0;
     height: 100%;
 }
 .photo-gallery{
-    width: 100%;
+    width: 80%;
     display: flex;
     gap: 20px;
+    text-align: center;
+    margin: auto;
 }
 .column{
     display: flex;
@@ -32,11 +37,11 @@
     transition: 0.3s ease;
   }
 
-/* .photo:not(.logo-overlay):hover {
+.photo:not(.logo-overlay):hover {
     transform: scale(1.02);
     filter: brightness(55%);
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-} */
+}
 .img:hover{
     transform: scale(1.02);
     filter: brightness(55%);
@@ -46,6 +51,7 @@
 .photo:hover ~ .photo {
     scale: 0.9; 
   }
+ 
   .photo .logo-overlay {
     position: absolute;
     top: 50%;
@@ -66,3 +72,21 @@
     filter: brightness(100%);
   }
 
+  @media screen and (max-width:660px){
+    .photo-gallery{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @media  screen and (max-width:1300px) {
+      .photo .logo-overlay{
+        width: 100px;
+        height: 100px;
+      }
+  }
+  @media screen and (max-width:800px){
+    .photo .logo-overlay{
+      width: 60px;
+      height: 60px;
+    }
+  }

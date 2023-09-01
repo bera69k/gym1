@@ -101,37 +101,11 @@ const getProfile = (req, res) => {
   }
 };
 
-// const logOut = async (req, res) => {
-//   const cookies = req.cookies;
-//   if (!cookies?.jwt) return res.sendStatus(204);
-//   const refreshToken = cookies.jwt;
-//   const foundUser = await User.findOne({ refreshToken }).exec();
-//   res.clearCookie("token", {
-//     httpOnly: true,
-//     secure: true,
-//     sameSite: "strict",
-//     // Add any other relevant options
-//   });
-//   if (!foundUser) {
-//     res.clearCookie("jwt", { httpOnly: true, sameSite: "None", secure: true });
-//     return res.sendStatus(204);
-//   }
-//   foundUser.refreshToken = "";
-//   const result = await foundUser.save();
-//   console.log(result);
-
-//   res.clearCookie("jwt", { httpOnly: true, sameSite: "None", secure: true });
-//   res.sendStatus(204);
-// };
-// const logOut = async (req, res) => {
-//   res.clearCookie('jwt', { httpOnly: true, sameSite: 'None', secure: true });
-//   res.sendStatus(204);
-// };
 
 module.exports = {
   test,
   registerUser,
   loginUser,
   getProfile,
-  // logOut,
+
 };

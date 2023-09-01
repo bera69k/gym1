@@ -32,7 +32,7 @@ const Arrows = ({ id }) => {
         <div>
           <button
             onClick={NextPageHandler}
-            className="absolute right-4 top-1/2"
+            className={classes.hamb2}
           >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-24 h-24">
   <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -41,33 +41,6 @@ const Arrows = ({ id }) => {
         </div>
       </div>
     </>
-
-    /**
-     * .hamburger {
-    display: block;
-    width: 35px;
-    cursor: pointer;
-    appearance: none;
-    background: none;
-    outline: none;
-    border: none;
-    position: absolute;
-    right: 20px;
-    top: 28px;
-
-}
-
-.hamburger .bar, .hamburger::after, .hamburger::before{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 5px;
-    background-color: #fff;
-    margin: 6px 0px;
-    transition: 0.4s;
-    border-radius: 10px;
-}
-     */
   );
 };
 

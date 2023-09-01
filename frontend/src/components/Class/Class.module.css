@@ -1,12 +1,14 @@
 .main {
   text-align: center;
-
+  
 }
+
 .bg {
   -webkit-box-shadow: inset -5px -17px 140px 11px rgba(0,0,0,1);
   -moz-box-shadow: inset -5px -17px 140px 11px rgba(0,0,0,1);
   box-shadow: inset -5px -17px 140px 11px rgba(0,0,0,1);
   height: 831px;
+  
 }
 .grid {
   display: grid;
@@ -15,6 +17,7 @@
   grid-gap: 1rem;
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
 .box {
@@ -91,6 +94,62 @@
 }
 
 @media screen and (max-width: 600px){
+  .bg{
+    height: 100%;
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 14;
+  }
+}
+@media screen and (max-width: 1500px){
+  .bg{
+    height: 100%;
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 14;
+  }
+}
+@media screen and (max-width: 1140px){
+  .bg{
+    height: 100%;
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 14;
+  }
+
+
+}
+@media screen and (max-width: 900px){
+  .bg{
+    height: 100%;
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 14;
+  }
+ 
+}
+@media screen and (max-width: 660px){
+  .bg{
+    height: 100%;
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 14;
+  }
+}
+@media screen and (max-width: 500px){
+  .bg{
+    height: 100%;
+  }
   .grid{
     display: grid;
     grid-template-columns: repeat(1, 1fr);

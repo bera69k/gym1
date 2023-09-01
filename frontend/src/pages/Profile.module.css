@@ -1,6 +1,6 @@
 .main{
     position: relative;
-    height: 100vh;
+    height: 831px;
 }
 .wrapper {
     position: absolute;
@@ -60,6 +60,10 @@
 -moz-box-shadow: -6px 10px 34px 2px rgba(255,0,0,0.58);
 border: 1px solid black;
 }
+.second{
+    margin: auto;
+    text-align: center;
+}
 .enrollmentContainer{
     display: inline-flex;
 
@@ -72,13 +76,31 @@ border: 1px solid black;
     text-align: center;
     font-size: 24px;
     margin: auto;
+    cursor: pointer;
 }
 .enrollment:nth-child(1){
     margin-top: 10px;
 }
+.enrollButton {
+    border: 1px solid #a8160c;
+    padding: 10px 20px;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: inset #a8160c;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+}
+.enrollButton:hover{
+    background-color: #a8160c;
+    transition: 0.6s ease-in-out;
+    color: white;
+    animation:  pop 0.3s forwards;
+    box-shadow: inset 0 100p x 0 0 #a8160c;
+}
 
 .expiration{
-    top: 10px;
+    transform: translateY(-60px);
     border: 1px solid black;
     border-radius: 20px;
     background: white;
@@ -96,6 +118,7 @@ border: 1px solid black;
 }
 .enrollment:hover .expiration{
     display: block;
+
 }
 /* .enrollment:hover .expiration:nth-child(2){
     top: 100px;

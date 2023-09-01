@@ -3,12 +3,13 @@ import classes from "../../pages/Profile.module.css";
 import pfp from "../../assets/pfp.png";
 import axios from 'axios'
 import { UserContext } from "../../../context/userContext";
+import gif from '../../assets/loading.gif'
 
 const UploadButton = () => {
   const [picture, setPicture] = useState(pfp);
   const input = useRef(null);
   const {user} = useContext(UserContext)
-
+  const [loading,setLoading] = useState(false)
 
 
   useEffect(() => {
@@ -16,60 +17,6 @@ const UploadButton = () => {
       fetchProfilePicture();
     }
   }, [user]);
-
-//  const fetchProfilePictureHandler = async () => {
-//   try {
-//     const response = await axios.get(`/api/user/${user.id}/profile-picture`);
-//     const profilePictureData = response.data.profilePicture;
-
-//     // Now you can use `profilePictureData` as the base64-encoded image in your frontend
-//     setPicture(profilePictureData);
-//   } catch (error) {
-//     console.error('Error fetching your profile picture:', error);
-//   }
-// };
-
-  // const profilePictureHandler = async (e) => {
-  //   e.preventDefault();
-    
-  //   const file = e.target.files[0];
-    
-  //   const reader = new FileReader();
-  //   reader.onload = async (event) => {
-  //     try {
-  //       const base64Image = event.target.result;
-
-  //       // Update the picture state with the base64-encoded image
-  //       setPicture(base64Image);
-
-  //       // Send the base64-encoded image to the backend
-  //       if (!file.type.startsWith('image/') || file.size > 1000000 ) {
-  //         console.log('Invalid file type or size');
-  //         return;
-  //       }
-  //       await sendImageToBackend(base64Image);
-  //     } catch (error) {
-  //       console.error('Error handling image:', error);
-  //     }
-  //   };
-
-  //   if (file) {
-  //     reader.readAsDataURL(file);
-  //   }
-  // };
-
-  // const sendImageToBackend = async (base64Image) => {
-  //   try {
-  //     const url = `/api/user/${user.id}/upload-picture`;
-  //     const response = await axios.post(url, {
-  //       profilePicture: base64Image,
-  //     });
-
-  //     console.log(response.data.message);
-  //   } catch (error) {
-  //     console.error('Error uploading profile picture:', error);
-  //   }
-  // };
 
   const fetchProfilePicture = async () => {
     try {
@@ -87,14 +34,16 @@ const UploadButton = () => {
     const file = event.target.files[0];
     if (file) {
       try {
+        setLoading(true)
         const formData = new FormData();
         formData.append("profilePicture", file);
   
         await axios.post(`/api/user/${user.id}/profile-picture`, formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
-  
+
         fetchProfilePicture();
+        setLoading(false)
       } catch (error) {
         console.error("Error uploading profile picture:", error);
       }
@@ -105,7 +54,7 @@ const UploadButton = () => {
   return (
     <>
       <img
-  src={picture}
+  src={loading ? gif : picture}
   alt="Profile"
   className={classes.profileImg}
 />

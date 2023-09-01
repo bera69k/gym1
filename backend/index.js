@@ -36,7 +36,7 @@ app.post("/api/enroll", async (req, res) => {
     const { userId, trainerName, price,  } = req.body;
 
     const expirationDate = new Date();
-    expirationDate.setDate(expirationDate.getDate() + 30)
+    expirationDate.setDate(expirationDate.getDate() + 31)
 
     const enrollment = new Enrollment({
       trainerName,

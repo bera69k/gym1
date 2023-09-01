@@ -25,6 +25,7 @@ const GalleryComponent = () => {
   return (
     <>
 <div className='bg'>
+    <div className='wallpaper'></div>
     <div className='container'>
     <div className='photo-gallery'>
     <div className='column'>
