@@ -40,8 +40,8 @@ const AboutDetail = () => {
 
   return (
     <>
-      <div>
-        <section className="h-screen m-0 bg-zinc-950 text-white">
+      <div className="h-screen m-0 bg-zinc-950">
+        <section className=" text-white">
           <div className={classes.gradient}></div>
           <h1 className={classes.title}>About Our Gym</h1>
           <div className="grid grid-cols-2 h-98 mt-12">
@@ -81,7 +81,7 @@ const AboutDetail = () => {
                       alt={`Trainer ${trainerId}`}
                     >
                       {isHovering && (<>
-                        <p>nigga</p>
+                        <p>{}</p>
                       </>)}
                     </div>
                   </Link>
