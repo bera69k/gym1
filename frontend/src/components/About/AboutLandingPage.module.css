@@ -1,0 +1,62 @@
+.title{
+    font-size: 56px;
+    text-align: center;
+    margin-top: 20px;
+}
+.desc{
+    font-size: 32px;
+    text-align: center;
+    margin: auto;
+    width: 700px;
+    margin-top: 100px;
+}
+.AboutTrainer{
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: "header"
+                          "main main main";
+                          grid-template-columns: 1fr 1fr 1fr;
+}
+.trainerImg{
+    clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);   
+    text-align: center;
+    transition: 1s ease-in-out;
+    object-fit: cover;
+    height: 420px;
+    width: 250px;
+    grid: "main main main"
+}
+
+.trainerImg2{
+    clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);   
+    transition: 1s ease-in-out;
+    object-fit: cover;
+    height: 420px;
+    width: 250px;
+}
+.trainerImg3{
+    clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);   
+    text-align: center;
+    transition: 1s ease-in-out;
+    object-fit: cover;
+    height: 420px;
+    width: 250px;
+}
+.trainerImg3:hover {
+    transform: translateY(20px);
+}
+.trainerImg:hover{
+    transform: translateY(20px);
+}
+.trainerImg2:hover{
+    transform: translateY(-20px);
+}
+.trainerImg:hover + .trainerImg2{
+    transform: translateY(-20px);
+}
+.trainerImg2:hover + .trainerImg3{
+    transform: translateY(20px);
+}
+
+
+

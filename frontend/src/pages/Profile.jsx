@@ -77,7 +77,9 @@ const Profile = () => {
                         <span className="text-md text-slate-500">/month</span>
                         <br />
                         <div className={classes.expiration} >
+                          <div className="text-center m-auto">
                           Expires on:{" "}
+                          </div>
                           {new Date(enrollment.expirationDate).toLocaleString(
                             "en-US",
                             {
@@ -89,6 +91,7 @@ const Profile = () => {
                               hour12: true,
                             }
                           )}
+                         
                         </div>
                       </li>
                     </div>
