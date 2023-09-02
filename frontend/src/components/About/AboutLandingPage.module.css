@@ -1,62 +1,110 @@
-.title{
-    font-size: 56px;
-    text-align: center;
-    margin-top: 20px;
+.title {
+  font-size: 56px;
+  text-align: center;
+  animation: pop 2s ease-in;
+
 }
-.desc{
-    font-size: 32px;
-    text-align: center;
-    margin: auto;
-    width: 700px;
-    margin-top: 100px;
+.desc {
+  font-size: 32px;
+  text-align: center;
+  margin: auto;
+  width: 700px;
+  margin-top: 100px;
+  animation: popUp 1.5s ease-in ;
 }
-.AboutTrainer{
-    display: grid;
-    gap: 1rem;
-    grid-template-areas: "header"
-                          "main main main";
-                          grid-template-columns: 1fr 1fr 1fr;
+.AboutTrainer {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "header"
+    "main main main";
+  grid-template-columns: 1fr 1fr 1fr;
 }
-.trainerImg{
-    clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);   
-    text-align: center;
-    transition: 1s ease-in-out;
-    object-fit: cover;
-    height: 420px;
-    width: 250px;
-    grid: "main main main"
+.trainerImg {
+  clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+  text-align: center;
+  transition: 1s ease-in-out;
+  object-fit: cover;
+  height: 420px;
+  width: 250px;
+  grid: "main main main";
+  margin-right: -100px;
+}
+.linkImg:nth-child(2) {
+  animation: movers 2s infinite;
+}
+.linkImg:nth-child(odd) {
+  animation: mover 2s infinite;
+}
+.linkImg:hover{
+    -webkit-animation: 0;
+}
+.linkImg:hover .trainerImg {
+
+  transition: 1s ease;
+  transform: scale(1.1);
+}
+.gradient {
+  background-color: #2f333e;
+  filter: blur(120px);
+  position: absolute;
+  border-radius: 90%;
+  top: 20%;
+  left: 60%;
+  opacity: 0.3;
+  width: 500px;
+  height: 500px;
+}
+.buttonDiv {
+  margin: auto;
+  text-align: center;
+  margin-top: 70px;
+}
+.btn {
+  padding: 12px 24px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+@keyframes mover {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
 }
 
-.trainerImg2{
-    clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);   
-    transition: 1s ease-in-out;
-    object-fit: cover;
-    height: 420px;
-    width: 250px;
+@keyframes movers {
+  0% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
 }
-.trainerImg3{
-    clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);   
-    text-align: center;
-    transition: 1s ease-in-out;
-    object-fit: cover;
-    height: 420px;
-    width: 250px;
-}
-.trainerImg3:hover {
-    transform: translateY(20px);
-}
-.trainerImg:hover{
-    transform: translateY(20px);
-}
-.trainerImg2:hover{
-    transform: translateY(-20px);
-}
-.trainerImg:hover + .trainerImg2{
-    transform: translateY(-20px);
-}
-.trainerImg2:hover + .trainerImg3{
-    transform: translateY(20px);
-}
+@keyframes popUp {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
 
-
-
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes pop {
+    
+    0% {
+      opacity: 0;
+      }  
+      100%{
+        opacity: 1;
+      }
+}
