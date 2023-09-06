@@ -3,7 +3,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black  grid w-screen grid-cols-3  h-48 text-center text-white  bottom-0 -md:grid -md:grid-rows-3  -md:grid-cols-1 -md:h-screen -xl:h-screen ">
+      <footer className="bg-black z-50 grid w-screen grid-cols-3  h-48 text-center text-white  bottom-0 -md:grid -md:grid-rows-3  -md:grid-cols-1 -md:h-screen -xl:h-screen ">
         <div className=" m-auto">
           <h1 className="uppercase text-3xl text-white">work harder with us</h1>
           <p className="uppercase text-xl">Biggest industry in our region</p>
@@ -19,7 +19,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="links ">
-          <ul className="ul -md:grid -md:grid-cols-1 -md-grid-rows-4 -xl:grid -xl:grid-cols-2 -xl-grid-rows-2">
+          <ul className="ul  -md:grid -md:grid-cols-1 -md-grid-rows-4 -xl:grid -xl:grid-cols-2 -xl-grid-rows-2">
             <li className="li">
               <Link className="a facebook">
                 <span className="span1"></span>

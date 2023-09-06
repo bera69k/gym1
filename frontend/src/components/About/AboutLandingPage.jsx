@@ -2,17 +2,13 @@
 import classes from "./AboutLandingPage.module.css";
 import { useNavigate } from "react-router";
 import { trainers } from "../Trainers";
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import Testimonial from "../Class/Testimonial";
+import LocationAbout from "./LocationAbout";
+import { useState, useRef, useEffect } from "react";
+
 const AboutDetail = () => {
   const [isHovering, setIsHovering] = useState();
-  const hoverHandler = () => {
-    setIsHovering(true);
-  };
-  const unHoverHandler = () => {
-    setIsHovering(false);
-  };
+  const [hoveredTrainer, setHoveredTrainer] = useState(null);
   const navigate = useNavigate();
   const redirectHandler = () => {
     navigate("location");
@@ -30,71 +26,85 @@ const AboutDetail = () => {
         randomIds.push(randomId);
       }
     }
-
     return randomIds;
   };
-
+  
   const [randomTrainerIds, setRandomTrainerIds] = useState(
     getRandomTrainerIds()
   );
 
+
+
   return (
     <>
-      <div className="h-screen m-0 bg-zinc-950">
-        <section className=" text-white">
+      <div className="h-screen m-0 bg-zinc-950 ">
+        <section  className=" text-white">
           <div className={classes.gradient}></div>
-          <h1 className={classes.title}>About Our Gym</h1>
-          <div className="grid grid-cols-2 h-98 mt-12">
-            <div>
+          <div className={classes.gradient2}></div>
+          <div>
+            <h1 className={classes.title}>ACHILLES</h1>
+          </div>
+          <div className="grid grid-cols-2 h-98  ">
+            <div className="block z-50">
               <p className={classes.desc}>
                 Welcome to Achilles Gym. You can find best trainers with history
                 of winning in their background ready to teach you all their
                 secrets to make you one of the best competitors in the future!
               </p>
+              <div className="m-auto text-center mt-12 test">
+             <Link to='location'> <button className={classes.location}>Location</button></Link>
+              </div>
             </div>
             <div>
-              <h1 className="text-5xl m-auto text-center mb-12 ">
-                Check Out our Trainers
-              </h1>
+              <h1 className={classes.trainerHeader}>Check Out our Trainers</h1>
 
-              <div
-                className={classes.AboutTrainer}
-                onMouseEnter={hoverHandler}
-                onMouseLeave={unHoverHandler}
-              >
-                {randomTrainerIds.map((trainerId) => (
-                  <Link
-                    to={`/classes/${trainerId}`}
-                    className={classes.linkImg}
-                    key={trainerId}
-                  >
-                    <div
-                      className={classes.trainerImg}
-                      style={{
-                        backgroundImage: `url(${
-                          trainers.find((trainer) => trainer.id === trainerId)
-                            .img
-                        })`,
-                        backgroundSize: "cover", // Adjust as needed
-                        backgroundPosition: "center", // Adjust as needed
-                      }}
-                      alt={`Trainer ${trainerId}`}
-                    >
-                      {isHovering && (<>
-                        <p>{}</p>
-                      </>)}
-                    </div>
-                  </Link>
-                ))}
+              <div className={classes.AboutTrainer}>
+                {randomTrainerIds.map((trainerId) => {
+                  const trainer = trainers.find(
+                    (trainer) => trainer.id === trainerId
+                  );
+                  return (
+                    <>
+                      <Link
+                        to={`/classes/${trainerId}`}
+                        className={classes.linkImg}
+                        key={trainerId}
+                      >
+                        <div
+                          onMouseEnter={() => setHoveredTrainer(trainerId)}
+                          onMouseLeave={() => setHoveredTrainer(null)}
+                          className={classes.trainerImg}
+                          style={{
+                            backgroundImage: `url(${
+                              trainers.find(
+                                (trainer) => trainer.id === trainerId
+                              ).img
+                            })`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                          }}
+                          alt={`Trainer ${trainerId}`}
+                        >
+                          {hoveredTrainer === trainerId && (
+                            <div className={classes.trainerName}>
+                              {trainer.num}
+                            </div>
+                          )}
+                        </div>
+                      </Link>
+                    </>
+                  );
+                })}
               </div>
               <div></div>
               <div className={classes.buttonDiv}>
-                <buton className={classes.btn}>Enroll Now!</buton>
+                <Link to='/classes'><button className={classes.btn}>Enroll Now!</button></Link>
               </div>
             </div>
           </div>
         </section>
       </div>
+      <LocationAbout/>
     </>
   );
 };

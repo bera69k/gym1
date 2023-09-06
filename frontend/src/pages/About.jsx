@@ -4,9 +4,7 @@ import Footer from '../components/Footer/Footer2'
 const About = () => {
   return (
     <>
-
       <AboutDetail/>
-
      <Footer/> 
     </>
   )

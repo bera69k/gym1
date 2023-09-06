@@ -116,9 +116,16 @@
  .google:hover {
     color: #dd4b39;
   }
+  
+  @media screen and (max-width: 1300px){
+   .links{
+    margin: auto;
+    text-align: center;
+   }
+  }
   @media screen and (max-width: 767px){
     .links {
-      margin-top: -120px;
+      margin-top: -140px;
     }
     .ul{
       display: grid;

@@ -1,0 +1,153 @@
+.height{
+    height: calc(100vh +  180px);
+    --tw-bg-opacity: 1;
+    background-color: rgb(9 9 11 / var(--tw-bg-opacity));
+}
+.hid{
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+    transition: all 2s;
+    color: white;
+    filter: blur(10px);
+    text-align: center;
+    margin: auto;
+    transform: translateY(500px);
+}
+.para{
+    color:white;
+    font-size: 20px;
+    line-height: 28px;
+    margin-left: 120px;
+    text-align: center;
+    width: 384px;
+    transition-delay:1s ;
+    transform: translateY(400px);
+    filter: blur(5px);
+    opacity: 0;
+    transition: all 2s;
+}
+.showww{
+    filter: blur(0) !important;; 
+    opacity: 1 !important;
+    transform: translateY(0);
+    transition: all 1s;
+}
+.text{
+    transform: translateY(-400px);
+    filter: blur(5px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.showw{
+    filter: blur(0) !important;; 
+    opacity: 1 !important;
+    transform: translateY(0);
+    transition: all 1s
+}
+
+.show{
+    filter: blur(0) !important;; 
+    opacity: 1 !important;
+    transform: translateY(0);
+}
+
+
+.arnold{
+    height: 800px;
+    width: 700px;
+    object-fit: cover;
+    z-index: 1;
+    position: relative;
+   
+}
+.gradientlol{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 180%;
+    border-radius: 75%;
+    background-color: #2f333e;;
+    filter: blur(120px);
+    position: absolute;
+    border-radius: 90%;
+    opacity: 1;
+    z-index: 2;
+}
+
+.test2{
+    border-radius: 30px;
+    position: absolute;
+    left: 55%;
+    scale: 0.5;
+    filter: blur(3px);
+    transition: all 2.5s;
+    opacity: 0;
+    transform: translateX(200px);
+}
+.test1{
+    border-radius: 30px;
+    position: absolute;
+    filter: blur(1px);
+    transform: translateX(-400px);
+    transition: all 2.5s;
+    opacity: 0;
+}
+.showers{
+    opacity: 1;
+    transform: translateX(0px); 
+}
+.showers1{
+    opacity: 1;
+    transform: translateX(0px);
+
+}
+.test3{
+    position: absolute;
+    left: 120%;
+    border-radius: 30px;
+    scale: 0.8;
+    transition: all 2.5s;
+    opacity: 0;
+
+}
+.test3:hover{
+    scale: 90%;
+    cursor: pointer;
+    transition: 1s ease;
+        box-shadow: -18px 19px 14px 0px rgba(0,0,0,0.75);
+}
+.showers2{
+    left: 54%;
+    opacity: 1;
+    animation: anim 2s ease-in-out infinite; 
+}
+
+
+
+@keyframes anim {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes anim2 {
+    0%{
+       bottom: 0px;
+    }
+    50%{
+        bottom: 5px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+
