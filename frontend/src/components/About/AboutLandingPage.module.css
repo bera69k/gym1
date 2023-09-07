@@ -27,6 +27,8 @@
     "header"
     "main main main";
   grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  text-align: center;
 }
 .trainerHeader{
   font-size: 48px;
@@ -67,8 +69,7 @@
     text-align: center;
     margin: auto;
     width: 100px;
-    padding-top: 20px;
-    
+    padding-top: 20px; 
 }
 .gradient {
   background-color: #000000;
@@ -82,7 +83,7 @@
   width: 500px;
   height: 500px;
   animation: popDown 1.5s ease-in;
-
+  overflow: hidden;
 }
 .gradient2 {
   background-color: #2f333e;;
@@ -95,6 +96,7 @@
   width: 500px;
   height: 500px;
   animation: popUpP 1.5s ease-in;
+  overflow: hidden;
 }
 .location{
   border: 1px solid #a8160c;
@@ -115,6 +117,7 @@
   margin: auto;
   text-align: center;
   margin-top: 70px;
+  margin-bottom: 100px;
 }
 .btn {
   border: 1px solid #a8160c;
@@ -220,5 +223,144 @@
   }
 }
 
+@media  screen and (max-width: 767px) {
+  .desc{
+    width: 350px;
+    font-size: 22px;
+    line-height: 28px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .location{
+    margin-bottom: 50px;
+  }
+  .trainerHeader{
+    font-size: 32px;
+    margin-bottom: 40px;
 
+  }
+  .AboutTrainer{
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    text-align: center;
+  }
+  .trainerImg{
+    height: 320px;
+    width: 220px;
+    margin: auto;
+    text-align: center;
+  }
+  .linkImg{
+    margin: auto;
+    text-align: center;
+  }
+
+  .buttonDiv{
+    margin-bottom: 20px;
+  }
+  .gradient{
+    top: 125%;
+    left: 20%;
+  }
+  .gradient2{
+    left: 10%;
+    top: 5%;
+  }
+}
+@media screen and (max-width: 1350px){
+.desc{
+  margin-top: 20px;
+}
+.AboutTrainer{
+  margin: auto;
+  text-align: center;
+}
+.gradient{
+  display: none;
+}
+.gradient2{
+  display: none;
+}
+.linkImg{
+  text-align: center;
+  margin: auto;
+  
+}
+.buttonDiv{
+  margin-bottom: 50px;
+}
+}
+@media screen and (min-width: 1540) {
+  .wtf{
+    margin-left: -25px;
+    margin: auto;
+    text-align: center;
+  }
+}
+@media screen and (max-width:1520px) {
+ 
+  .AboutTrainer{
+    max-width:1200px;
+
+  }
+  .linkImg{
+
+  }
+  .trainerImg{
+
+  }
+  .wtf{
+    margin: auto;
+    text-align: center;
+
+  }
+}
+@media  screen and (min-width: 1360) {
+
+}
+@media screen and (max-width:1200px) {
+  .AboutTrainer{
+    max-width: 900px;
+    margin: auto;
+  }
+}
+@media screen and (min-width:780px) {
+  .AboutTrainer{
+    width:  700px;
+
+  }
+}
+@media screen and (min-width:880px) {
+  .AboutTrainer{
+    width:  800px;
+  
+  }
+}
+
+/* @media screen and (max-width:920px) {
+  .linkImg{
+    margin-left: 10px;
+  }
+} */
+@media screen and (max-width:300px) {
+  .desc{
+    width: 250px;
+  }
+}
+
+@media screen and(max-width:590px) {
+
+.linkImg{
+  margin: auto;
+  text-align: center;
+
+}
+}
+@media screen  and(min-width:600px){
+  .desc{
+    width: 500px;
+  }
+}
 

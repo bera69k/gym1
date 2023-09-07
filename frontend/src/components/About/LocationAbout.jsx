@@ -65,17 +65,17 @@ const LocationAbout = () => {
   return (
     <>
       <div className="height">
-        <section className="section">
+        <section className="section ">
           <section className="gradientlol"></section>
-          <main ref={ref} className="grid grid-cols-3">
-            <div >
+          <main ref={ref} className="grid grid-cols-3 adc bg-zinc-950 -md:grid -md:grid-cols-1">
+            <div>
               <div className="text">
               <h1 className="text-white text-4xl m-auto text-center mt-96">
                 Ready to train?
               </h1>
               </div>
-              <div className="para">
-                Don't trust us yet? Check out our other users reviews and
+              <div className="para mb-24">
+                Dont trust us yet? Check out our other users reviews and
                 ratings we got!<Link to='/classes'><span className="text-[red]">(Find more on the trainers page)</span></Link>
               </div>
             </div>

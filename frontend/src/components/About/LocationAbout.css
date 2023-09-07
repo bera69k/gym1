@@ -2,6 +2,10 @@
     height: calc(100vh +  180px);
     --tw-bg-opacity: 1;
     background-color: rgb(9 9 11 / var(--tw-bg-opacity));
+
+}
+.adc {
+
 }
 .hid{
     width: 500px;
