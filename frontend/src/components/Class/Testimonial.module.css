@@ -74,3 +74,29 @@
   .testContainer:nth-child(even) .star-icon-filled:nth-child(even) {
     color: rgba(255, 193, 0, 1); 
   }
+  @media screen  and (max-width:767px){
+    .mainContainer{
+      display: grid;
+      grid-template-columns: 1fr;
+      height: calc(100vh + 500px);
+    }
+    .testContainer{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      margin-top: 0px;
+      margin: auto;
+      text-align: center;
+      
+    }
+    .testContainer:nth-child(1){
+      margin-top:200px;
+      margin-bottom:50px
+      
+    } 
+    .testContainer:nth-child(2){
+      margin-top:20px;
+      margin-bottom:50px
+      
+    } 
+  }

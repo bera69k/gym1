@@ -206,3 +206,13 @@
     right: -100px;
   }
 }
+@media screen and (max-width:1300px) {
+  .trainer-info-section{
+    height: calc(100vh + 350px);
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .exercises{
+    margin-top: -100px;
+  }
+}

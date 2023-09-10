@@ -106,7 +106,7 @@ const AboutDetail = () => {
         </section>
       </div>
       <div className="bg-zinc-950">
-                <LocationAbout/>
+      <LocationAbout/>
       </div>
     </>
   );

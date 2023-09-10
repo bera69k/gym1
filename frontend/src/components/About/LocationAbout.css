@@ -154,4 +154,14 @@
         bottom: 0px;
     }
 }
+@media screen and (max-width:1500px) {
+    .height{
+        height: calc(100vh+500px);
+    }
+    .showers1{
+        transform: translateX(100px);
+    }
+
+
+}
 

@@ -4,7 +4,6 @@
   }
 .li {
     list-style:none;
-
   }
 .a {
     display:block;
@@ -117,7 +116,7 @@
     color: #dd4b39;
   }
   
-  @media screen and (max-width: 1300px){
+  @media screen and (max-width: 1600px){
    .links{
     margin: auto;
     text-align: center;

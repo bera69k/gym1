@@ -53,7 +53,7 @@ export default {
 
       '-xl': {'max': '1540px'},
       // => @media (max-width: 1279px) { ... }
-
+      '-mid':{'max': '1300px'},
       'lg': {'max': '1023px'},
       // => @media (max-width: 1023px) { ... }
 

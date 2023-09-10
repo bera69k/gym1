@@ -165,7 +165,7 @@ const ClassHelper = () => {
           </div>
         )}
       </div>
-      <div className="absolute w-screen h-64 m-auto text-center -bottom-56  bg-black blur-3xl ">
+      <div className="absolute w-screen h-64 m-auto text-center -bottom-56  bg-black blur-3xl  -mid:-bottom-[620px] ">
         <span></span>
       </div>
       <PointDown scrollHandler={scrollHandler} visible={visible} />

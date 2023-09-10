@@ -79,3 +79,20 @@
     100% { bottom:20px;
         }
 }
+@media screen and (max-width:1300px) {
+    .circle{
+       transform: translate(-25px,400px);
+    }
+}
+@media screen and (max-width:550px) {
+    .hamb, .hamb2{
+        transform: translateY(800px);
+        z-index: 10;
+    }
+    .hamb:hover, .hamb2:hover{
+        animation: none;
+    }
+    .circle{
+        display: none;
+    }
+}
