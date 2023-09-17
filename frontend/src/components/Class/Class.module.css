@@ -51,6 +51,7 @@
   -moz-box-shadow: -9px 200px 137px 0px rgba(0,0,0,0.86) inset;
 }
 .button{
+  font-size: 20px;
   text-transform: uppercase;
   display: flex;
   transform: translateX(27%);

@@ -237,7 +237,6 @@
   .trainerHeader{
     font-size: 32px;
     margin-bottom: 40px;
-
   }
   .AboutTrainer{
     height: fit-content;
@@ -285,8 +284,7 @@
 }
 .linkImg{
   text-align: center;
-  margin: auto;
-  
+  margin: auto; 
 }
 .buttonDiv{
   margin-bottom: 50px;
@@ -303,22 +301,11 @@
  
   .AboutTrainer{
     max-width:1200px;
-
-  }
-  .linkImg{
-
-  }
-  .trainerImg{
-
   }
   .wtf{
     margin: auto;
     text-align: center;
-
   }
-}
-@media  screen and (min-width: 1360) {
-
 }
 @media screen and (max-width:1200px) {
   .AboutTrainer{
@@ -329,28 +316,22 @@
 @media screen and (min-width:780px) {
   .AboutTrainer{
     width:  700px;
-
   }
 }
 @media screen and (min-width:880px) {
   .AboutTrainer{
     width:  800px;
-  
   }
 }
-
 @media screen and (max-width:300px) {
   .desc{
     width: 250px;
   }
 }
-
 @media screen and(max-width:590px) {
-
 .linkImg{
   margin: auto;
   text-align: center;
-
 }
 }
 @media screen  and(min-width:600px){

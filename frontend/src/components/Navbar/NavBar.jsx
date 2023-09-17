@@ -15,7 +15,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="bg-black relative flex drop-shadow-xl font-oswald m-0 h-23 font-medium w-screen">
+      <div className="bg-zinc-950 relative flex drop-shadow-xl font-oswald m-0 h-23 font-medium w-screen">
         <Link to="/" className="absolute  ">
           <img
             src={logo}
@@ -23,7 +23,7 @@ const NavBar = () => {
           />
         </Link>
 
-        <ul className="flex   gap-4 m-auto text-white text-xl uppercase pl-0 hover:font-medium -md:hidden ">
+        <ul className="flex   gap-4 m-auto text-white text-2xl uppercase pl-0 hover:font-medium -md:hidden ">
           <li className="">
             <NavLink
               to=""

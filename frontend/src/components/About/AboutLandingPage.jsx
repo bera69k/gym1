@@ -64,12 +64,13 @@ const AboutDetail = () => {
                   );
                   return (
                     <>
-                    <div className={classes.wtf}>
+                   
                       <Link
                         to={`/classes/${trainerId}`}
                         className={classes.linkImg}
                         key={trainerId}
                       >
+                        
                         <div
                           onMouseEnter={() => setHoveredTrainer(trainerId)}
                           onMouseLeave={() => setHoveredTrainer(null)}
@@ -92,7 +93,6 @@ const AboutDetail = () => {
                           )}
                         </div>
                       </Link>
-                    </div>
                     </>
                   );
                 })}

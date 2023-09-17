@@ -9,7 +9,8 @@ const HomeS = () => {
   return (
     <>
       <div className={classes.main}>
-        <div className={classes["bg-img"]}></div>
+        <div className={classes.abs}></div>
+        {/* <div className={classes["bg-img"]}></div> */}
         <div className={classes.submain}>
             <div className={classes.imageWrapper}>
               <img src={hero} className={classes.heroImage} />
