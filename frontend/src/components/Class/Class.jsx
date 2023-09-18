@@ -17,7 +17,7 @@ const Class = (props) => {
   return (
     <div className={classes.main}>
       <div
-        style={{ backgroundImage: `url(${image})` }}
+        style={{ backgroundImage: `url(${image})`}}
         className={classes.box}
         onMouseOver={hoverHandler}
         onMouseOut={unHoverHandler}

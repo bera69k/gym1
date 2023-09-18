@@ -10,7 +10,6 @@ const HomeS = () => {
     <>
       <div className={classes.main}>
         <div className={classes.abs}></div>
-        {/* <div className={classes["bg-img"]}></div> */}
         <div className={classes.submain}>
             <div className={classes.imageWrapper}>
               <img src={hero} className={classes.heroImage} />
@@ -25,21 +24,18 @@ const HomeS = () => {
               how to be one of the best.
             </p>
             <div className={classes.link}>
-              {user ? (
-                <Link to={`/profile/${user.name}`} className={classes.link}>
-                  {user ? (
+              {user ? (   
+                    <div className={classes.btnCont}>
+                    <Link to='/classes' >
+                    <button className={classes.butEnr}>ENROLL</button>
+                    </Link>
+                    <Link to={`/profile/${user.name}`}>
                     <button className={classes.button}>PROFILE</button>
-                  ) : (
-                    <button className={classes.button}>JOIN US</button>
-                  )}
-                </Link>
+                    </Link>
+                    </div>            
               ) : (
                 <Link to="/login" className={classes.link}>
-                  {user ? (
-                    <button className={classes.button}>PROFILE</button>
-                  ) : (
                     <button className={classes.button}>JOIN US</button>
-                  )}
                 </Link>
               )}
             </div>

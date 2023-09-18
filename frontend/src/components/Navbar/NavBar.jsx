@@ -15,7 +15,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="bg-zinc-950 relative flex drop-shadow-xl font-oswald m-0 h-23 font-medium w-screen">
+      <div className="bg-zinc-950 relative flex drop-shadow-xl font-oswald m-0 h-23 font-medium w-screen z-10">
         <Link to="/" className="absolute  ">
           <img
             src={logo}
