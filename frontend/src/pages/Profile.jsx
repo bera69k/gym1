@@ -44,7 +44,6 @@ const Profile = () => {
 
   return (
     <div className={classes.main}>
-      <div className={classes.wrapper}></div>
       <div className={classes.container}>
         <div className={classes["personal-info-container"]}>
           {/* <UploadButton/> */}

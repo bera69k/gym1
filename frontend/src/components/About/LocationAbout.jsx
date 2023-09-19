@@ -76,7 +76,7 @@ const LocationAbout = () => {
               </div>
               <div className="para mb-24 -xl:m-auto -xl:text-center -xl:mb-12">
                 Dont trust us yet? Check out our other users reviews and
-                ratings we got!<Link to='/classes'><span className="text-[red]">(Find more on the trainers page)</span></Link>
+                ratings we got!<Link to='/classes'><span className="text-[#ff2300]">(Find more on the trainers page)</span></Link>
               </div>
             </div>
             <div>

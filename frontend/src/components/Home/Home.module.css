@@ -64,6 +64,7 @@
   color: #ff2400;
   font-size: 100px;
   text-align: center;
+  margin: auto;
 }
 
 .text {
@@ -104,12 +105,11 @@
 }
 .butEnr:hover{
   transition: 0.6s ease-in;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid #FF2400;
+  color: #ff2400;
   background-color:transparent ;
 }
 .button:hover {
-  
   transition: 0.6s ease-in;
   border: 1px solid#FF2400;
   color: #ff2400;

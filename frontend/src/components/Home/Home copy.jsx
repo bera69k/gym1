@@ -17,7 +17,9 @@ const HomeS = () => {
           <div className={classes.headerText}>
             <h1 className={classes.h1}>TRAIN WITH</h1>
             <span className={classes.htext}>
+              <Link to='/about'>
               <h2 className={classes.us}>US</h2>
+              </Link>
             </span>
             <p className={classes.text}>
               Professionals in their own area of expretise ready to teach you
