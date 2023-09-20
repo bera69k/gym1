@@ -4,19 +4,26 @@ import { trainers } from "../components/Trainers";
 import { useState,useEffect } from "react";
 const Classes = () => {
   const [cursorPosition, setCursorPosition] = useState({ left: 0, top: 0 });
-
+  const [isFollowing, setIsFollowing] = useState(false);
+  let timeoutId;
 
   const updateCursorPosition = (e) => {
     setCursorPosition({ left: e.clientX, top: e.clientY });
+
+    // Clear the existing timeout
+    clearTimeout(timeoutId);
+
+    // Set a new timeout to start following after 300ms
+    timeoutId = setTimeout(() => {
+      setIsFollowing(true);
+    }, 300);
   };
 
   useEffect(() => {
-
-    document.addEventListener('mousemove', updateCursorPosition);
-
+    document.addEventListener("mousemove", updateCursorPosition);
 
     return () => {
-      document.removeEventListener('mousemove', updateCursorPosition);
+      document.removeEventListener("mousemove", updateCursorPosition);
     };
   }, []);
 
@@ -24,7 +31,14 @@ const Classes = () => {
     <>
     <div className={classes.bg}>
       <div className={classes.grid}>
-      <div className={classes.abs}  style={{ left: cursorPosition.left, top: cursorPosition.top }}></div>
+        <div
+          className={`${classes.abs} ${isFollowing ? classes.following : ""}`}
+          style={{
+            left: cursorPosition.left,
+            top: cursorPosition.top,
+            transition: "left 0.3s ease, top 0.3s ease"
+          }}
+        ></div>
         {trainers.map((trainer) => {
           return (
             <Class
@@ -35,10 +49,9 @@ const Classes = () => {
             />
           );
         })}
-       
       </div>
-      </div>
-    </>
+    </div>
+  </>
   );
 };
 

@@ -23,9 +23,7 @@
   opacity:0.4;
   width: 500px;
   height: 500px;
-
 }
-
 .submain {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -36,7 +34,6 @@
   position: relative;
   bottom: 0;
 }
-
 .heroImage {
   display: flex;
   justify-content: center;
@@ -117,6 +114,7 @@
 .link {
   text-align: center;
 }
+
 @keyframes left {
   0% {
     opacity: 0;

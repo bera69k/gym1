@@ -1,13 +1,8 @@
 .bg{
     height: 100%;
     width: 100vw;
-    -webkit-box-shadow: inset -5px -17px 140px 11px rgba(0, 0, 0, 1);
-    -moz-box-shadow: inset -5px -17px 140px 11px rgba(0, 0, 0, 1);
-    box-shadow: inset -5px -17px 140px 11px rgba(0, 0, 0, 1);
-    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(107, 5, 5, 0.4)), url('../../assets/ass.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: rgb(9,9,11);
+
 }
 .container{
     margin: auto;
