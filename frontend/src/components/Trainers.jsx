@@ -26,7 +26,13 @@ import legpress from '../assets/Videos/thumbnails/legrpess.webp'
 import mikedbf from '../assets/Videos/mikeDBF.mp4'
 import mikedbfJPG from '../assets/Videos/thumbnails/mikedbf.jpg'
 import johndoe from '../assets/john-doe.png'
+import drun from '../assets/Videos/drun.mp4'
+import drunthumb from '../assets/drunthumb.jpeg'
 import zena from '../assets/zena.webp'
+import pullup from '../assets/Videos/pullup.mp4'
+import pullupthumb from '../assets/Videos/thumbnails/pullupthumb.jpg'
+import dips from '../assets/Videos/dips.mp4'
+import dipsthumb from '../assets/Videos/thumbnails/dipsthumb.png'
 
 export const  trainers = [
   {
@@ -90,8 +96,8 @@ export const  trainers = [
     img: david1,
     description: "David Goggins is an American ultramarathon runner, ultra-distance cyclist, and triathlete known for his mental toughness and endurance.",
     exercises: [
-      { name: "Exercise 1", video: "", thumbnail: "" },
-      { name: "Exercise 2", video: "", thumbnail: "" },
+      { name: "10-15 Miles Run", video: drun, thumbnail: drunthumb },
+      { name: "4030 Pull-Ups", video: pullup, thumbnail: pullupthumb },
     ],
     price: "49",
     courseOverview: [
@@ -193,7 +199,7 @@ export const  trainers = [
     description: "Mike Mentzer was an American professional bodybuilder known for his Heavy Duty training philosophy.",
     exercises: [
       { name: "Incline Dumbbell Flies", video: mikedbf, thumbnail: mikedbfJPG },
-      { name: "Exercise 2", video: "", thumbnail: "" },
+      { name: "weighted Dips", video: dips, thumbnail:dipsthumb},
     ],
     price: "49",
     courseOverview: [

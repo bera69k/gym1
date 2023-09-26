@@ -140,15 +140,18 @@ const ClassHelper = () => {
                 </li>
               ))}
             </ul>
+             {user ? (
+              <>
             <p className={styles.desc}>
               Enroll in the class to see the rest of the program
             </p>
-            {user ? (
+           
               <button className={styles.button} onClick={enrollInClass}>
                 Enroll in the Class
               </button>
+              </>
             ) : (<>
-              <p>Please log in to enroll and access the full program.</p>
+              <p className="text-2xl mt-5 mb-5">Please log in to enroll and access the full program.</p>
               <Link to='/login'><button className={styles.log}>Join Us</button></Link>
               </>
             )}
